@@ -2,10 +2,10 @@
 
 Anytime you want to do anything more than once in a Python program, you should consider putting it inside a loop.  
 There are two types of loops in python, a 'for' loop and a 'while' loop. Generally for loops are used when you know the amount of times you want to repeat something. It doesn't have to be an exact integer value, it can also be anything easily calculable. 'While' loops are used when you aren't sure how many times you need to repeat something. 
-In python, all control statements use indentation to define blocks of grouped code. 
+In python, all control statements use indentation to define blocks of grouped code.   
 
-## For Loops (definite iteration)
-### Iterating iterables
+# For Loops (definite iteration)
+## Iterating iterables
 For loops always start with the keyword 'for' and then an iterator followed by some condition. 
 Here are a few examples:  
 ```python
@@ -35,6 +35,17 @@ dictionary = {'apple':3, 'banana':5, 'cherry':20}
 for entry in dictionary.value():   # you can also use .items() to get the dictionary keys
     print(entry)
 ```
-### Iterating Ranges
-Using the range function, we can also create for loops that include 
-## While Loops (indefinite iteration)
+## Iterating Ranges
+Using the range function, we can also create 'for' loops that iterate a number of times. Consider these examples:
+```python
+for count in range(10):
+    print(count)
+```
+```python 
+# how long is the string 
+string = 'How long is a piece of string?' 
+count = 0
+for i in range(len(string)):
+    count +=1 
+print(count)
+```

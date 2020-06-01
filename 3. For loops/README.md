@@ -13,7 +13,7 @@ string = 'hello world!'
 for i in string:
     print(i)
 ```
-In this first case, we define a sting of text we poignantly called string. Then we create the for loop by stating that for each index (i) inside the string, we want to print out the value of 'i'. It is common practice in coding to use 'i' as the variable that iterates through something in a loop. The output of this code is that each letter is looked at by the 'i' in the for loop and then printed out to a new line in the console. 
+In this first case, we define a sting of text we poignantly called string. Then we create the 'for' loop by stating that for each index (i) inside the string, we want to print out the value of 'i'. It is common practice in coding to use 'i' as the variable that iterates through something in a loop or for an index location for something iterable. The output of this code is that each letter is looked at by the 'i' in the for loop and then printed out to a new line in the console. 
 ```python
 word = 'banana'
 count = 0 
@@ -32,7 +32,7 @@ for item in list_of_fruit:
 ```
 ```python
 dictionary = {'apple':3, 'banana':5, 'cherry':20}
-for entry in dictionary.value():   # you can also use .items() to get the dictionary keys
+for entry in dictionary.values():   # you can also use .items() or .keys() to get the dictionary pairs or keys
     print(entry)
 ```
 
@@ -76,3 +76,60 @@ for x in adjective:
     print(x, y) 
 ```
 In this example we iterate over two separate lists and join them together in the print statement. In the outside 'for' loop, x runs through each of the items in the variable 'adjective', then the inner 'for' loop is called and y iterates through the 'fruits' variable. When the outer loop gets to the first index, it runs the inner loop until it completes all it's iterations and then x moves onto the next index. In our example this means that 'x' first has the value 'red', then 'y' iterates through each of the 'fruits' list printing out 'red apple', 'red banana' and 'red cherry' first... Run the code for yourself and see.   
+To see how many times an inner loop will run, you can multiply it by all the possible different options of the outer loops and the inner loop to find out. Consider this example:   
+```python
+number = ["3", "2", "1", "100"]
+adjective = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+count = 0
+for x in number:
+    for y in adjective:
+        for z in fruits:
+            count += 1
+            print(x, y, z) 
+total = len(number) * len(adjective) * len(fruits)   # Multiplied as explained
+if count == total:
+    print("We just proved how to calculate the number of times a loop runs!!")
+    print(count)
+else:
+    print("Epic fail dood!!")
+```
+If you run this code, you can see that the code runs 36 times and that that's exactly the same number of times as each of list lengths multiplied together. There are some other niche cases you may see in loops, one of which is the 'else' statement.   
+```python
+number = ["3", "2", "1", "100"]
+adjective = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+count = 0
+for x in number:
+    for y in adjective:
+        for z in fruits:
+            count += 1
+            print(x, y, z) 
+        else:
+            print("inside loop!")
+    else: 
+        print("inner loop")
+else:
+    print("outside loop!")
+    print(count)
+    print(len(number) * len(adjective) * len(fruits))
+```
+When the loop finishes, anything in the 'else' statement is executed. If the loop is broken out of or fails to execute, the 'else' statement doesn't execute. Try this for yourself:   
+```python
+number = ["3", "2", "1", "100"]
+adjective = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+count = 0
+for x in number:
+    for y in adjective:
+        for z in fruits:
+            break
+        else:
+            print("inside loop!")
+    else: 
+        print("inner loop")
+else:
+    print("outside loop!")
+    print(count)
+    print(len(number) * len(adjective) * len(fruits))
+```

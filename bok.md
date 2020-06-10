@@ -67,3 +67,8 @@
 ## The Stack 
 ## The Heap
 # Functional programming
+
+
+# Adams Library suggestions
+## requests??
+## 

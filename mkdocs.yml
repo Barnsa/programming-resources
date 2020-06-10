@@ -1,0 +1,4 @@
+site_name: My Docs
+nav:
+  - home: '../index.md'
+  - 'values and types': '../1. Values and Types/README.md'

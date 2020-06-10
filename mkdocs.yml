@@ -1,4 +1,17 @@
-site_name: My Docs
+site_name: Python Bad-Assery
+
 nav:
-  - home: '../index.md'
-  - 'values and types': '../1. Values and Types/README.md'
+  - home: index.md
+  - 'Values and Types': 'values-and-types/README.md'
+  - 'Iteration':
+    - 'For Loops': 'for-loops/README.md'
+
+markdown_extensions:
+  - codehilite
+  
+theme: 
+  name: material
+  logo: 'images/logo.svg'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'

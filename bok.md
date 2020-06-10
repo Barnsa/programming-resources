@@ -1,7 +1,3 @@
-
-
-
-
 # Testing
 ## PyTest
 ## Unit Testing
@@ -52,14 +48,19 @@
 # Sets
 # Boolean Logic
 # Probabilities
-# Graphs and trees
 # Representation of Data
+## Bytes, Characters and Byte Strings
 ## Bases
 ## Binary
 ## Hex
 ## ASCII, Unicode, UTF-8
 ## Base64
-
+# Interacting with the Network
+## Requests
+## Sockets
+## Scapy
+## Beautiful Soup
+# Graphs and trees
 # Low-Level Programming
 ## Assembly Language
 ## Interrupts
@@ -69,6 +70,3 @@
 # Functional programming
 
 
-# Adams Library suggestions
-## requests??
-## 

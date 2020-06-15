@@ -24,9 +24,7 @@ else:
 ```
 Can you figure out what it does??     
 In this example we have a variable called count that stores a value (5), this number has to be on the outside of the loop so that it can be properly modified, if it was inside the loop then it wouldn't change because each iteration of the loop would create it's own version of the variable due to the rules of scope. The check is run for the loop, which determines that the value of count is greater than zero, so runs the loop.   
-We first print the value of count, we do this first because if we decrement count first then we would print out the value '4' not '5'. Next we decrement the count by 1, this statement is the same as `count = count - 1`. The 'if' statement looks to see if the value of count is 2, and if it is to break out of the while loop. The 'else statement only activates when the while loop successfully runs and exits naturally, so it never runs here because the break statement gets tripped.   
-## Try This!
-See if you can modify the loop to so that it counts down from 10, and that once it gets to zero it prints the the word 'Liftoff!'. Make the else statement print that the rocket was successfully launched.   
+We first print the value of count, we do this first because if we decrement count first then we would print out the value '4' not '5'. Next we decrement the count by 1, this statement is the same as `count = count - 1`. The 'if' statement looks to see if the value of count is 2, and if it is to break out of the while loop. The 'else statement only activates when the while loop successfully runs and exits naturally, so it never runs here because the break statement gets tripped.    
 
 ## Example 'while' loops
 Here are a few 'while' loops to give you some ideas of the kinds of ways you might use them:   

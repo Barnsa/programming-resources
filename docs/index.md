@@ -3,7 +3,7 @@
 * Version Control
 	* Git
 	* Creating a repository
-	* Staging, comitting and pushing
+	* Staging, committing and pushing
 
 * Variables and state
 	* Data Types

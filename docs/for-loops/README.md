@@ -135,3 +135,4 @@ else:
 ```
 
 ## Test Your Knowledge: Countdown
+See if you can create a loop that can count down from 10, and that once it gets to zero it prints the the word 'Liftoff!'. See if you can also make the print that the rocket was successfully launched. 

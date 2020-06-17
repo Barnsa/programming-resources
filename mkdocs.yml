@@ -8,10 +8,23 @@ nav:
 
 markdown_extensions:
   - codehilite
-  
+
+plugins:
+  - search
+  - macros
+
 theme: 
   name: material
   logo: 'images/logo.svg'
   palette:
     primary: 'indigo'
     accent: 'indigo'
+
+
+module_name: main
+
+extra:
+    price: 12.50
+    company:
+        name: Acme
+        website: www.acme.com

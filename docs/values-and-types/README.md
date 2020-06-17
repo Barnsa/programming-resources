@@ -1,5 +1,5 @@
 # Values and Types
-There are 4 basic types in python; Boolean, integer, floating point number and string. Boolean's or "bool's" are either true or false, a one or a zero, they are representative of the binary calculations that make computers work. Integers are any whole number and can be both positive and negative numbers, where as floating point numbers are anything with a decimal point in. A string is an interesting type as it also works like an iterable which we'll see more of later, but it stores a string of characters together. Every time we make a value that a computer needs to be able to reuse, we call that type a "variable". Let's look at some examples of how we use types and make variables:
+There are 4 basic types in python; Boolean, integer, floating point number and string. Booleans or "bools" are either true or false, a one or a zero, they are representative of the binary calculations that make computers work. Integers are any whole number and can be both positive and negative numbers, where as floating point numbers are anything with a decimal point in. A string is an interesting type as it also works like an iterable which we'll see more of later, but it stores a string of characters together. Every time we make a value that a computer needs to be able to reuse, we call that type a "variable". Let's look at some examples of how we use types and make variables:
  
 ## Basic Types: Creating your first variable
 To create your first variable it's pretty easy, you just name it and then use the assignment operator to assign it to that name. This will create a sort of pet name, or pseudonym, for a location in memory where that value is then stored. Anytime you use that pseudonym you'll use whatever is stored in that memory location again. It's easier to show you then it is to explain it, so make sure you feel comfortable with everything here before you move on. 
@@ -66,6 +66,7 @@ name_of_a_list = ["variables", "are", "contained", "in", "here", 12, True, 33.33
 
 ```
 As all indexes start at the number zero as a general rule in programming, we could also represent this data in a table like this:
+
 | index number  |      0      |   1   |      2      |   3   |   4    |   5   |   6   |    7     |
 | :------------ | :---------: | :---: | :---------: | :---: | :----: | :---: | :---: | :------: |
 | variable data | "variables" | "are" | "contained" | "in"  | "here" |  12   | True  | 33.33334 |

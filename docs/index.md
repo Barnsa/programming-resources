@@ -1,4 +1,10 @@
 # Introduction
+
+Half of 10 is {{ env|pretty }}
+
+{{ bar(100) }}
+
+{{ macros_info() }}
 # Contents
 * Version Control
 	* Git

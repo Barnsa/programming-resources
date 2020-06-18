@@ -1,9 +1,23 @@
 # Introduction
 
+1 to 6
+
 {{ code_from_file("values-and-types/example-1.py", 1, 6) }}
+
+Flavour is python
+
 {{ code_from_file("values-and-types/example-1.py", flavor = "python") }}
+
+2 to 5
+
 {{ code_from_file("values-and-types/example-1.py", 2, 5) }}
+
+to 5
+
 {{ code_from_file("values-and-types/example-1.py", stop = 5) }}
+
+2 to 5, bash
+
 {{ code_from_file("values-and-types/example-1.py", 2, 5, "bash") }}
 
 

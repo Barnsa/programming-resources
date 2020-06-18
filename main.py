@@ -34,7 +34,7 @@ def define_env(env):
     env.macro(math.floor) # will be exported as 'floor'
 
     @env.macro
-    def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = ""):
+    def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = "", download=True):
         """
         Load code from a file and save as a preformatted code block.
         Start and stop can also be used to indicate the starting line and the stopping line
@@ -53,6 +53,7 @@ def define_env(env):
         if not os.path.exists(fn):
             return f"""<b>File not found: {fn}</b>"""
         with open(fn, "r") as f:
+            output=""
             # return (
             #     f"""<div class="codehilight"><pre><code class="{flavor}">{html.escape(f.read())}</code></pre></div>"""
             # )
@@ -67,16 +68,9 @@ def define_env(env):
             
             for line in x:
                 temp.append(line)
-            if start is not None and stop is not None:
-                return (f"""```python \n{''.join(temp[start:stop])} \n```""")
-            elif start is not None and stop is None:
-                return (f"""```python \n{''.join(temp[start:])} \n```""")
-            elif start is None and stop is not None:
-                return (f"""```python \n{''.join(temp[:stop])} \n```""")
-            else:
-                return (
-                    f"""```python \n{''.join(x)} \n```"""
-                )
+
+            output+=f"""```python \n{''.join(temp[start:stop])} \n```"""
+            return output
 
     @env.macro
     def external_markdown(fn: str):

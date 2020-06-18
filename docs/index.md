@@ -6,7 +6,7 @@
 
 Flavour is python, exec
 
-{{ code_from_file("values-and-types/example-1.py", flavor = "python", execute=True) }}
+{{ code_from_file("values-and-types/example-1.py", flavor = "python", execute=True, download=True) }}
 
 2 to 5
 

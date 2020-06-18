@@ -49,15 +49,19 @@ def define_env(env):
             {{ code_from_file("code/myfile.py", stop = 5) }}
             {{ code_from_file("code/myfile.py", 2, 5, "python") }}
         """
-        docs_dir = env.variables.get("docs_dir", "docs")
-        fn = os.path.abspath(os.path.join(docs_dir, fn))
-        if not os.path.exists(fn):
+        docs_dir = env.variables.get("./docs_dir", "docs")
+        relative_fn = os.path.join(docs_dir, fn)
+        full_fn = os.path.abspath(os.path.join(docs_dir, fn))
+        if not os.path.exists(relative_fn):
             return f"""<b>File not found: {fn}</b>"""
-        with open(fn, "r") as f:
-            output=""
-            # return (
-            #     f"""<div class="codehilight"><pre><code class="{flavor}">{html.escape(f.read())}</code></pre></div>"""
-            # )
+        with open(relative_fn, "r") as f:
+            fr=str(start or "the beginning")
+            to=str(stop or  "the end")
+            btn= "" if not download else button("Download this file",fn)
+            btn=f"<span class='dlbtn'>{btn}</span>"
+
+            output=f"<div class='codeblock'><div class='codetitle'><code>{os.path.basename(full_fn)}</code> from {fr} to {to} {btn} </div>\n"
+
             temp = []
             x = f.readlines()
             
@@ -72,12 +76,11 @@ def define_env(env):
 
             code="".join(temp[start:stop])
             output+=f"""```python \n{code} \n```\n\n"""
-            if download:
-                output+=button("Download this file",fn)
-            if execute:            
+            if execute:
+                output+="<div class='codetitle'>Output</div>\n"
                 output+=f"""```\n{evalCap(code)}\n```\n\n"""
 
-                
+            output+="\n</div>"
             return output
 
     @env.macro

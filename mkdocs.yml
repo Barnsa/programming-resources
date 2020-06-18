@@ -32,3 +32,8 @@ extra:
     company:
         name: Acme
         website: www.acme.com
+
+
+extra_css:
+    - css/extra.css
+

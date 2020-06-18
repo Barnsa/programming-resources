@@ -1,18 +1,19 @@
-# Nested Loops, some examples of nested loops for 
-
-number = ["3", "2", "1", "100"]
+# example-5.py first example
+# Nested Loops, some examples of nested for loops
+print("First Example")
 adjective = ["red", "big", "tasty"]
 fruits = ["apple", "banana", "cherry"]
-count = 0
-
-print("First Example")
 for x in adjective:
   for y in fruits:
     print(x, y) 
     
     
-print("\n")
-print("Second Example")
+# example-5.py second example
+number = ["3", "2", "1", "100"]
+adjective = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+count = 0
+
 for x in number:
     for y in adjective:
         for z in fruits:

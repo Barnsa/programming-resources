@@ -3,8 +3,12 @@ site_name: Python Bad-Assery
 nav:
   - home: index.md
   - 'Values and Types': 'values-and-types/README.md'
+  - 'Conditionals': 'conditionals/README.md'
   - 'Iteration':
     - 'For Loops': 'for-loops/README.md'
+    - 'While Loops': 'while-loops/README.md'
+    - 'Recursion': 'recursion/README.md'
+  - 'Functions': 'functions/README.md'
 
 markdown_extensions:
   - codehilite

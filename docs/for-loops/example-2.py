@@ -1,5 +1,5 @@
+# example-2.py
 # iterating iterables, a basic example of a counting loop in python 3 
-
 word = 'banana'
 count = 0 
 for letter in word:

@@ -12,54 +12,20 @@ while <condition>:
 <additional statements>
 ```
 The condition is to indicate when the loop must stop, the statements must contain something you want to do repetitively, and the additional statements are things such as the 'else' statement that we saw in the 'for' loop examples too. Consider this simple while loop:   
-```python
-count = 5 
-while count > 0:
-    print(count)
-    count -= 1
-    if count == 2:
-        break
-else: 
-    print("Loop finished.")
-```
+
+{{ code_from_file("while-loops/example-1.py") }}
+
 Can you figure out what it does??     
 In this example we have a variable called count that stores a value (5), this number has to be on the outside of the loop so that it can be properly modified, if it was inside the loop then it wouldn't change because each iteration of the loop would create it's own version of the variable due to the rules of scope. The check is run for the loop, which determines that the value of count is greater than zero, so runs the loop.   
 We first print the value of count, we do this first because if we decrement count first then we would print out the value '4' not '5'. Next we decrement the count by 1, this statement is the same as `count = count - 1`. The 'if' statement looks to see if the value of count is 2, and if it is to break out of the while loop. The 'else statement only activates when the while loop successfully runs and exits naturally, so it never runs here because the break statement gets tripped.    
 
 ## Example 'while' loops
 Here are a few 'while' loops to give you some ideas of the kinds of ways you might use them:   
+
+{{ code_from_file("while-loops/example-2.py") }}
+
 ```python
-# Search and index
-pet = ["dog", "cat", "rabbit", "snake", "octopus", ]
-search = "buffalo"
-i = 0 
-while i < len(pet):
-    if pet[i] == search:
-        # we would have found search in pet
-        print(f"We found the search term in index {i}.")
-        break
-    i += 1
-else:
-    # We didn't find the search item in the list
-    print("We didn't find the search term!")
-```
-```python
-# Simplified executable run loop 
-check = True
-count = 1
-while check:
-    if count == 1:
-        print("This program will continue to run until you tell it to stop!")
-        print("Do you want to stop yet?")
-    if count != 1:
-        print("How about now? ")
-    answer = input().lower()
-    stop_commands = ["stop", "exit", "yes", "sure", "get me out of here you filthy mudblood!"]
-    count += 1
-    if answer in stop_commands:
-        answer = input("Are you sure? ").lower()
-        if answer in stop_commands:
-            break 
+
 ```
 ```python
 

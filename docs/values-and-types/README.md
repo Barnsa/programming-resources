@@ -6,54 +6,20 @@ To create your first variable it's pretty easy, you just name it and then use th
 
 ### Naming Conventions
 Variable names can start with a number, letter, or underscore, but not any other special character. [PEP8](https://www.python.org/dev/peps/pep-0008/) Python programming conventions say that variables should be named with all lower case letters, for longer variable names each word should be separated by underscores: 
-```python
-# example-1.py
-# a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer 
-variable = 10
 
-# This is the same thing but with a more descriptive and longer variable name
-the_number_of_vowels_in_banana = 3
+{{ code_from_file("values-and-types/example-1.py") }}
 
-print(variable)
-print(the_number_of_vowels_in_banana)
-```
 As code is read many more times than its written, so generally speaking longer variable names help others understand your code better. It's also good practice when you start to be very descriptive, so when you look back over your code to prompt you and study your programming, you'll remember what it was you were doing and how it works at a glance.
 
 ### Assignment 
 Python is a dynamically typed language, what this means is that you don't have to know what type of data you want to store in a variable to be able to create it. In statically typed languages such as the 'C' family of languages, you must declare the type of data you are going to store in memory before you store it. In python, variables dynamically change behind the scenes to accommodate different basic types, here's an example:
-```python
-# example-2.py
-variable = 10 
-print(variable)
 
-variable = True
-print(variable)
+{{ code_from_file("values-and-types/example-2.py") }}
 
-variable = "hello"
-print(variable)
-
-variable = 3.14
-print(variable)
-```
 In this example, our variable ambiguously called "variable" is a single location in memory. Each time we use the assignment operator (the equals sign), we force the location to store a different type of data and then ask it to print out to the screen. We're printing out the contents of the same location in memory every time, we're just overwriting the data in that location. We can also check the types of data with the next example:
-```python
-# example-3.py
-variable = 10 
-print(variable)
-print(type(variable))
 
-variable = True
-print(variable)
-print(type(variable))
+{{ code_from_file("values-and-types/example-3.py") }}
 
-variable = "hello"
-print(variable)
-print(type(variable))
-
-variable = 3.14
-print(variable)
-print(type(variable))
-```
 This does exactly the same as example 2 but it also prints out the basic type of the variable at each stage. Now you can see each of the types printed out too... test it yourself!
 
 ## Test Your Knowledge: Making your own variables

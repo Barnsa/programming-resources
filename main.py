@@ -1,10 +1,20 @@
 """
 Basic example of a Mkdocs-macros module
 """
-
+from io import StringIO
+import sys
 import math
 import os
 # import html
+
+def evalCap(code):
+    old_stdout = sys.stdout
+    redirected_output = sys.stdout = StringIO()
+    exec(code)
+    sys.stdout = old_stdout
+    return redirected_output.getvalue()
+
+
 
 def define_env(env):
     """
@@ -13,28 +23,19 @@ def define_env(env):
     - variables: the dictionary that contains the environment variables
     - macro: a decorator function, to declare a macro.
     """
-
-    # add to the dictionary of variables available to markdown pages:
-    env.variables['baz'] = "John Doe"
-
-    # NOTE: you may also treat env.variables as a namespace,
-    #       with the dot notation:
-    env.variables.baz = "John Doe"
+    # import the predefined macro
+    fix_url = env.variables.fix_url # make relative urls point to root
 
     @env.macro
-    def bar(x):
-        return (2.3 * x) + 7
+    def button(label, url):
+        "Add a button"
+        url = fix_url(url)
+        HTML = """<a class='button' href="%s">%s</a>"""
+        return HTML % (url, label)
 
-    # If you wish, you can  declare a macro with a different name:
-    def f(x):
-        return x * x
-    env.macro(f, 'barbaz')
-
-    # or to export some predefined function
-    env.macro(math.floor) # will be exported as 'floor'
-
+    
     @env.macro
-    def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = "", download=True):
+    def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = "", download=False, execute=False):
         """
         Load code from a file and save as a preformatted code block.
         Start and stop can also be used to indicate the starting line and the stopping line
@@ -69,7 +70,14 @@ def define_env(env):
             for line in x:
                 temp.append(line)
 
-            output+=f"""```python \n{''.join(temp[start:stop])} \n```"""
+            code="".join(temp[start:stop])
+            output+=f"""```python \n{code} \n```\n\n"""
+            if download:
+                output+=button("Download this file",fn)
+            if execute:            
+                output+=f"""```\n{evalCap(code)}\n```\n\n"""
+
+                
             return output
 
     @env.macro
@@ -96,3 +104,5 @@ def define_env(env):
         return x.upper()[::-1]
     
     
+if __name__=="__main__":
+    print(evalCap("print('hello inception')"))

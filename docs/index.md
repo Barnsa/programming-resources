@@ -1,12 +1,12 @@
 # Introduction
 
-1 to 6
+1 to 6, download
 
-{{ code_from_file("values-and-types/example-1.py", 1, 6) }}
+{{ code_from_file("values-and-types/example-1.py", 1, 6, download=True) }}
 
-Flavour is python
+Flavour is python, exec
 
-{{ code_from_file("values-and-types/example-1.py", flavor = "python") }}
+{{ code_from_file("values-and-types/example-1.py", flavor = "python", execute=True) }}
 
 2 to 5
 
@@ -21,11 +21,6 @@ to 5
 {{ code_from_file("values-and-types/example-1.py", 2, 5, "bash") }}
 
 
-Half of 10 is {{ env|pretty }}
-
-{{ bar(100) }}
-
-{{ macros_info() }}
 # Contents
 * Version Control
 	* Git

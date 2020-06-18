@@ -37,12 +37,16 @@ def define_env(env):
     def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = ""):
         """
         Load code from a file and save as a preformatted code block.
+        Start and stop can also be used to indicate the starting line and the stopping line
+        you wish to extract from the file. 
         If a flavor is specified, it's passed in as a hint for syntax highlighters.
 
         Example usage in markdown:
 
-            {{code_from_file("code/myfile.py", "python")}}
-
+            {{ code_from_file("code/myfile.py", flavor = "python") }}
+            {{ code_from_file("code/myfile.py", 2, 5) }}
+            {{ code_from_file("code/myfile.py", stop = 5) }}
+            {{ code_from_file("code/myfile.py", 2, 5, "python") }}
         """
         docs_dir = env.variables.get("docs_dir", "docs")
         fn = os.path.abspath(os.path.join(docs_dir, fn))
@@ -54,6 +58,13 @@ def define_env(env):
             # )
             temp = []
             x = f.readlines()
+            
+            # a fix to change python slicing to code line numbers, includes the final integer now.
+            if start is not None and start > 0:
+                start = start -1 
+            if stop is not None:
+                stop = stop + 1
+            
             for line in x:
                 temp.append(line)
             if start is not None and stop is not None:

@@ -1,7 +1,10 @@
 # Introduction
 
-{{ code_from_file("values-and-types/example-1.py") }}
-
+{{ code_from_file("values-and-types/example-1.py", 1, 6) }}
+{{ code_from_file("values-and-types/example-1.py", flavor = "python") }}
+{{ code_from_file("values-and-types/example-1.py", 2, 5) }}
+{{ code_from_file("values-and-types/example-1.py", stop = 5) }}
+{{ code_from_file("values-and-types/example-1.py", 2, 5, "python") }}
 
 
 Half of 10 is {{ env|pretty }}

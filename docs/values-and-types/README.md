@@ -77,6 +77,7 @@ name_of_a_list = ["variables", "are", "contained", "in", "here", 12, True, 33.33
 
 print(name_of_list[3])
 ```
-Which one of the variables do you think gets printed?? If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the data doesn't. 
+Which one of the variables do you think gets printed?? If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the data doesn't. Tuples are similar to lists in that they have an index number for the location of the data, but they are not mutable, which is to say they cannot change their data once they are created. 
+
 
 ## Test Your Knowledge: 

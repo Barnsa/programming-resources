@@ -1,5 +1,9 @@
 # Introduction
 
+{{ code_from_file("values-and-types/example-1.py") }}
+
+
+
 Half of 10 is {{ env|pretty }}
 
 {{ bar(100) }}

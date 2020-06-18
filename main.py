@@ -3,6 +3,8 @@ Basic example of a Mkdocs-macros module
 """
 
 import math
+import os
+# import html
 
 def define_env(env):
     """
@@ -31,9 +33,61 @@ def define_env(env):
     # or to export some predefined function
     env.macro(math.floor) # will be exported as 'floor'
 
+    @env.macro
+    def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = ""):
+        """
+        Load code from a file and save as a preformatted code block.
+        If a flavor is specified, it's passed in as a hint for syntax highlighters.
 
+        Example usage in markdown:
+
+            {{code_from_file("code/myfile.py", "python")}}
+
+        """
+        docs_dir = env.variables.get("docs_dir", "docs")
+        fn = os.path.abspath(os.path.join(docs_dir, fn))
+        if not os.path.exists(fn):
+            return f"""<b>File not found: {fn}</b>"""
+        with open(fn, "r") as f:
+            # return (
+            #     f"""<div class="codehilight"><pre><code class="{flavor}">{html.escape(f.read())}</code></pre></div>"""
+            # )
+            temp = []
+            x = f.readlines()
+            for line in x:
+                temp.append(line)
+            if start is not None and stop is not None:
+                return (f"""```python \n{''.join(temp[start:stop])} \n```""")
+            elif start is not None and stop is None:
+                return (f"""```python \n{''.join(temp[start:])} \n```""")
+            elif start is None and stop is not None:
+                return (f"""```python \n{''.join(temp[:stop])} \n```""")
+            else:
+                return (
+                    f"""```python \n{''.join(x)} \n```"""
+                )
+
+    @env.macro
+    def external_markdown(fn: str):
+        """
+        Load markdown from files external to the mkdocs root path.
+        Example usage in markdown:
+
+            {{external_markdown("../../README.md")}}
+
+        """
+        docs_dir = env.variables.get("docs_dir", "docs")
+        fn = os.path.abspath(os.path.join(docs_dir, fn))
+        if not os.path.exists(fn):
+            return f"""<b>File not found: {fn}</b>"""
+        with open(fn, "r") as f:
+            return f.read()
+    
+    
     # create a jinja2 filter
     @env.filter
     def reverse(x):
         "Reverse a string (and uppercase)"
         return x.upper()[::-1]
+    
+    

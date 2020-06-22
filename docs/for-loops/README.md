@@ -12,22 +12,22 @@ Here are a few examples:
 
 In this first case, we define a sting of text we poignantly called string. Then we create the 'for' loop by stating that for each index (i) inside the string, we want to print out the value of 'i'. It is common practice in coding to use 'i' as the variable that iterates through something in a loop or for an index location for something iterable. The output of this code is that each letter is looked at by the 'i' in the for loop and then printed out to a new line in the console. 
 
-{{ code_from_file("for-loops/example-2.py", flavor = "python") }}
+{{ code_from_file("for-loops/example-2.py", flavor = "python", execute = True) }}
 
 In this example, we have a more pythonic idea. The word 'letter' works the same way as the 'i' in the previous example, it's just more descriptive which helps with clarity when rereading later. See if you can work out what this program does without running it.   
 Other than strings you can also iterate through any type of iterable including: dictionaries, lists, tuples and sets. 
 Here are some examples:
 
-{{ code_from_file("for-loops/example-3.py", 3, 6) }}
+{{ code_from_file("for-loops/example-3.py", 3, 6, execute = True) }}
 
-{{ code_from_file("for-loops/example-3.py", 8, 11) }}
+{{ code_from_file("for-loops/example-3.py", 8, 11, execute = True) }}
 
-{{ code_from_file("for-loops/example-3.py", start = 13) }}
+{{ code_from_file("for-loops/example-3.py", start = 13, execute = True) }}
 
 ## Iterating Ranges
 Using the range function, we can also create 'for' loops that iterate a number of times. Consider these examples:
 
-{{ code_from_file("for-loops/example-4.py", 3, 5) }}
+{{ code_from_file("for-loops/example-4.py", 3, 5, execute = True) }}
 {{ code_from_file("for-loops/example-4.py", 7, 9) }}
 {{ code_from_file("for-loops/example-4.py", 11, 13) }}
 

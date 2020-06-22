@@ -60,7 +60,7 @@ def define_env(env):
             btn= "" if not download else button("Download this file",fn)
             btn=f"<span class='dlbtn'>{btn}</span>"
 
-            output=f"<div class='codeblock'><div class='codetitle'><code>{os.path.basename(full_fn)}</code> from {fr} to {to} {btn} </div>\n"
+            output=f"<div class='codeblock'><div class='codetitle'><code>{os.path.basename(full_fn)} from {fr} to {to} </code> {btn} </div>\n"
 
             temp = []
             x = f.readlines()

@@ -26,11 +26,11 @@ This does exactly the same as example 2 but it also prints out the basic type or
 For this knowledge test, using appropriate naming conventions try making your own variables to describe numbers and strings you might use in your own programs. Make variables to contain a happy birthday wish, the value of pi to 5 decimal places, your favourite integer under 100, a variable containing the meaning of life, and the true or false logic of whether a mouse is larger than a Giraffe. Try to make at least one variable of every basic type. 
 
 ## Composite Types
+### Lists
 There are also types that store or arrange basic types to make it easier to work with them, the three composite types are; lists, dictionaries, and tuples. Lists store a malleable group of variables that are easy to work with because the values can be referred to by index. An index is the numerical location of the position that a variable is in a list. Consider this list:
-```python
-name_of_a_list = ["variables", "are", "contained", "in", "here", 12, True, 33.33334]
 
-```
+{{ code_from_file("values-and-types/example-4.py", 1, 4) }}
+
 As all indexes start at the number zero as a general rule in programming, we could also represent this data in a table like this:
 
 | index number  |      0      |   1   |      2      |   3   |   4    |   5   |   6   |    7     |
@@ -39,10 +39,46 @@ As all indexes start at the number zero as a general rule in programming, we cou
 
 We can write code to interact with an index value like this:   
 
-{{ code_from_file("values-and-types/example-4.py", 1, 5) }}    
+{{ code_from_file("values-and-types/example-4.py", 1, 5) }}
 
-Which one of the variables do you think gets printed?? If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the data doesn't. Tuples are similar to lists in that they have an index number for the location of the data, but they are not mutable, which is to say they cannot change their data once they are created. 
+Which one of the variables do you think gets printed?? If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the data doesn't. Tuples are similar to lists in that they have an index number for the location of the data, but they are not mutable, which is to say they cannot change their data once they are created.
 
+### Tuples 
+Tuples can be treated in two ways, as a record and as an immutable list. As a record, tuples are used to store data in a certain order and keep it that way, generally for use later in the code:
 
+{{ code_from_file("values-and-types/example-5.py", 1, 10) }}
 
-## Test Your Knowledge: 
+In this example, the data is stored in a tuple and then unpacked for use in the print statement. You could print a packed tuple but you would get a print out with brackets too. Unpacking a tuple creates new objects that are referenced by the variables used in the unpacking, if you change the value of those variables then you'll only change the value of the new objects and not the values in the tuple you just unpacked. This is a good way to have records hard coded into a program Here is a short example of how that works:
+
+{{ code_from_file("values-and-types/example-5.py", start = 12) }}
+
+This brings us nicely onto the other way to use tuples, as immutable lists. The reason you use tuples as immutable lists is so that you can use slicing and other list functionality that also works with tuples, but without the fear of someone else in your production team modifying the list by accident. Another way to store data as records is to store it as a dictionary.
+
+### Dictionary
+Dictionaries are an interesting data structure, its used to store data in key value pairs so that you can easily access the data by label instead of by index value. This is especially helpful if you want to dynamically create a csv file or know you need to store categorised data throughout a program, but other people are in charge of much of the data input. Dictionaries always have this form:
+
+```python
+d = {
+    <key>: <value>,
+    <key>: <value>,
+      .
+      .
+      .
+    <key>: <value>
+}
+```
+Multiple values can be stored under the same key, and even any other objects, and all of them can be referenced with the key. Consider this assignment:
+
+{{ code_from_file("values-and-types/example-6.py", 1, 21, execute = True) }}
+
+In this example we can see that it is reasonably simple to create a dictionary, you can either create an empty one or in our example have it pre-filled with a few things to get the ball rolling. Then as you progress in the program you can also add to it like any other dynamic object, this is done in our code with the line:
+
+{{ code_from_file("values-and-types/example-6.py", 15, 15) }}
+
+The first part is the name of our dictionary, then the key we want to use inside the square brackets, and then the assignment operator followed by the value we want to give it.Using all of these basic and composite types are what make up everything you'll do to store, label, and create data inside a python program.  
+
+## Test Your Knowledge:
+Make for yourself a list, a tuple and a dictionary. Then look at different ways to add, remove, delete and generally manipulate the data that is associated with these composite types. The file "test-your-knowledge.py" has some broken code for you to fix and some notes on interesting ways to manipulate data in these composite types for you to complete.
+
+{{ code_from_file("values-and-types/test-your-knowledge.py", 1, 3) }}
+

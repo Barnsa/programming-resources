@@ -2,5 +2,6 @@
     "cSpell.words": [
         "iterable",
         "pythonic"
-    ]
+    ],
+    "python.pythonPath": "venv\\Scripts\\python.exe"
 }

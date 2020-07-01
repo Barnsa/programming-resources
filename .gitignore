@@ -1,5 +1,8 @@
+# ignore stuff in the production and testing phases
 site/
-scratch.py
+scratch/
 venv/
 *~
-/__pycache__/
+
+# ignore __pycache__ everywhere
+*__pycache__/

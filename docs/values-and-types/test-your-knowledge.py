@@ -3,9 +3,9 @@
 # . . . 
 ## First create an empty dictionary called "dictionary_of_things", 
 ## a tuple called "tuple_of_stuff" and a list called "list_of_bits".
-dictionary_of_things = {}
 tuple_of_stuff = ()
 list_of_bits = []
+dictionary_of_things = {}
 
 
 ## Next make <key>:<value> entries in the dictionary that adds 

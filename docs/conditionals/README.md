@@ -26,7 +26,7 @@ The higher something is on the table the sooner it gets done. Things in parenthe
 
 {{ code_from_file("conditionals/example-1.py", 1, 10, execute=True) }}
 
-The code as you can see, doesn't respond the way we might like. We would want the code to work out if we can have dinner if we picked a valid dinner option and also had enough money, but as we don't have enough money why is it evaluating as True? It's because the AND evaluates first, evaluating to False, and then the OR evaluates. In the evaluation of True OR False, it always evaluates to True. We can fix this with tht following modification:
+The code as you can see, doesn't respond the way we might like. We would want the code to work out if we can have dinner firstly if we picked a valid dinner option and also had enough money, but as we don't have enough money why is it evaluating as True? It's because the AND evaluates first, evaluating to False, and then the OR evaluates. In the evaluation of True OR False, it always evaluates to True. We can fix this with the following modification:
 
 {{ code_from_file("conditionals/example-1.py", 13, 22, execute=True) }}
 
@@ -34,7 +34,7 @@ The other order of precedence that you have to watch out for is that some evalua
 
 {{ code_from_file("conditionals/example-2.py", 1, 18, execute=True) }}
 
-
+You can see that depending on the type of evaluation used it will depend on whether it is evaluated from left to right. When in doubt you should test your code thoroughly and use parenthesis. 
 
 ## Literal Values
 We've covered all of the basic types in python; the string, Boolean, integer, and floating point number. However, python also supports a lot of other literal values that aren't commonly used. Below is a more comprehensive list of literal values:
@@ -57,12 +57,13 @@ We've covered all of the basic types in python; the string, Boolean, integer, an
 | Dictionary Literals | {} , {'x':7}                 |
 | Set Literals        | {8, 9, 10}                   |
 
-For those interested in coding literals and some of the abstract ideas surrounding literal testing, you can find more reading on python 3 conventions [here](https://www.python.org/dev/peps/pep-0586/) (WARNING: very advanced stuff!!).
+For those interested in coding literals and some of the abstract ideas surrounding literal testing, you can find more reading on python 3 conventions [here](https://www.python.org/dev/peps/pep-0586/) (WARNING: very advanced stuff!!). Here are some examples of the literals being used:
+
+{{ code_from_file("conditionals/example-6.py", start=1, execute=True) }}
+
 Generally though, you will only use basic types unless you are purposely trying to obfuscate your code, or doing type conversion specifically. It's just a good idea to be familiar with the other literals so that you aren't confused if you encounter them in other peoples code. The long integer isn't in python 3.x anymore as all integers are now treated as if they are long integers in python, to learn more about how it gets converted and how python is interpreted you can find it in the documentation [here](https://docs.python.org/3/c-api/long.html). 
 
-## Boolean Logic
-All logic inside a computer boils down to True or False logic. True is either represented by its name or by the number 1, False is represented by its name or 0. All modern classical (Von Neumann architecture) computers are based off of Boolean logic and Boolean algebra, this means that all the components inside the machine have been developed to take 1's and 0's and represent them in every way we need to create. 
- 
+
 ## {{ state("TODO") }} Inequalities
 
 ## If 
@@ -81,5 +82,32 @@ As you can see the code is a little more logically grouped and it helps with pro
 
 ## Else 
 The else statement is designed to run after everything in the if/elif statement evaluates to False. Consider it a piece of code that runs 'if all else fails'. Else statements can also be used in loops which you will see later. Let's take the code we had in example 3 and 4 and improve it further to incorporate else statements:
+
+{{ code_from_file("conditionals/example-5.py", 1, 40, execute=True) }}
+
+## Boolean Logic
+All logic inside a computer boils down to True or False logic. True is either represented by its name or by the number 1, False is represented by its name or 0. All modern classical (Von Neumann architecture) computers are based off of Boolean logic and Boolean algebra, this means that all the components inside the machine have been developed to take 1's and 0's and represent them in every way we need to create useful data with. For the purposes of programming however, you need to understand how truth tables refer to AND, OR, NAND (not AND) and NOR (not OR) logic. Here are the truth tables for each of the logical comparisons
+
+|  AND  | True  | False |
+| :---: | :---: | :---: |
+| True  | True  | False |
+| False | False | False |
+
+|  OR   | True  | False |
+| :---: | :---: | :---: |
+| True  | True  | True  |
+| False | True  | False |
+
+| NAND  | True  | False |
+| :---: | :---: | :---: |
+| True  | False | True  |
+| False | True  | True  |
+
+|  NOR  | True  | False |
+| :---: | :---: | :---: |
+| True  | False | False |
+| False | False | True  |
+
+When considering your if statements, you need to consider how they will be evaluated. Consider this code fragment:
 
 {{ code_from_file("conditionals/example-5.py", 1, 40, execute=True) }}

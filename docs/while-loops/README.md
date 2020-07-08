@@ -24,9 +24,7 @@ Here are a few 'while' loops to give you some ideas of the kinds of ways you mig
 
 {{ code_from_file("while-loops/example-2.py") }}
 
-```python
+{{ code_from_file("while-loops/example-3.py") }}
 
-```
-```python
-
-```
+## Test your knowledge
+Create a while loop that calculates the Fibonacci sequence 

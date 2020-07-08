@@ -27,18 +27,18 @@ to 5
 	* Creating a repository
 	* Staging, committing and pushing
 
-* Variables and state
-	* Data Types
-	* Assignment
-	* Naming Conventions
-	* Test your Knowledge: Probabilities
+* [Variables and state](./values-and-types/README.md)
+	* [Data Types](./values-and-types/README.md#values-and-types)
+	* [Assignment](./values-and-types/README.md#basic-types-creating-your-first-variable)
+	* [Naming Conventions](./values-and-types/README.md#naming-conventions)
+	* [Test your Knowledge: Probabilities](./values-and-types/README.md#test-your-knowledge)
 
-* Statements and Expressions
-	* Evaluation
-	* Order of Precedence
-	* Literal Values
-	* Boolean Logic
-	* Inequalities
+* [Statements and Expressions](./conditionals/README.md)
+	* [Evaluation](./conditionals/README.md#evaluation)
+	* [Order of Precedence](./conditionals/README.md#order-of-precedence)
+	* [Literal Values](./conditionals/README.md#literal-values)
+	* [Boolean Logic](./conditionals/README.md#boolean-logic)
+	* [Inequalities](./conditionals/README.md#inequalities)
 
 * Testing
 	* PyTest
@@ -48,14 +48,14 @@ to 5
 	* Test Your Knowledge: Bug Hunt (broken code they have to fix)
 
 * Selection
-	* If
-	* Else
-	* Elif
+	* [If](./conditionals/README.md#If)
+  	* [Else](./conditionals/README.md#Else)
+	* [Elif](./conditionals/README.md#elif)
 * Iteration
 	* [For](./for-loops/README.md)
 		* [Test Your Knowledge: Countdown](./for-loops/README.md#test-your-knowledge-countdown)
-	* While
-		* Test Your Knowledge: Fibonacci
+	* [While](./while-loops/README.md)
+		* [Test Your Knowledge: Fibonacci](./while-loops/README.md#test-your-knowledge)
 	* Break
 	* Continue
 	* Else

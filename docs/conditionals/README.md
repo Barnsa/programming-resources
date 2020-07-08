@@ -63,7 +63,7 @@ Generally though, you will only use basic types unless you are purposely trying 
 ## Boolean Logic
 All logic inside a computer boils down to True or False logic. True is either represented by its name or by the number 1, False is represented by its name or 0. All modern classical (Von Neumann architecture) computers are based off of Boolean logic and Boolean algebra, this means that all the components inside the machine have been developed to take 1's and 0's and represent them in every way we need to create. 
  
-## Inequalities
+## {{ state("TODO") }} Inequalities
 
 ## If 
 The first control statement you need to learn in Python is the if statement. If statements are used in the construction of conditional execution to create decision making code. The 'if' part will execute if the statement evaluates as true. Consider this example:

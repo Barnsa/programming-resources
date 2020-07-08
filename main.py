@@ -33,6 +33,14 @@ def define_env(env):
         HTML = """<a class='button' href="%s">%s</a>"""
         return HTML % (url, label)
 
+
+    @env.macro
+    def state(state: str):
+        """
+        Display state span in output
+        """
+        return(f"<span class='state-{state}'>{state}</span>")
+
     
     @env.macro
     def code_from_file(fn: str, start: int = None, stop: int = None, flavor: str = "", download=False, execute=False):

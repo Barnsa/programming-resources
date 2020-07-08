@@ -1,0 +1,621 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
+    
+    
+      
+        <title>Python Bad-Assery</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="Python Bad-Assery" class="md-header-nav__button md-logo" aria-label="Python Bad-Assery">
+      
+  <img src="images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Python Bad-Assery
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              home
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Python Bad-Assery" class="md-nav__button md-logo" aria-label="Python Bad-Assery">
+      
+  <img src="images/logo.svg" alt="logo">
+
+    </a>
+    Python Bad-Assery
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="." title="home" class="md-nav__link md-nav__link--active">
+      home
+    </a>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="values-and-types/" title="Values and Types" class="md-nav__link">
+      Values and Types
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="conditionals/" title="Conditionals" class="md-nav__link">
+      Conditionals
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Iteration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Iteration" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Iteration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="for-loops/" title="For Loops" class="md-nav__link">
+      For Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="while-loops/" title="While Loops" class="md-nav__link">
+      While Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="recursion/" title="Recursion" class="md-nav__link">
+      Recursion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="functions/" title="Functions" class="md-nav__link">
+      Functions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="introduction">Introduction</h1>
+<p>1 to 6, download</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from 1 to 6 </code> <span class='dlbtn'><a class='button' href="../values-and-types/example-1.py">Download this file</a></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py</span>
+<span class="c1"># a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer </span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># This is the same thing but with a more descriptive and longer variable name</span>
+<span class="n">the_number_of_vowels_in_banana</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">#blank line</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>Flavour is python, exec</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from the beginning to the end </code> <span class='dlbtn'><a class='button' href="../values-and-types/example-1.py">Download this file</a></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py</span>
+<span class="c1"># a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer </span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># This is the same thing but with a more descriptive and longer variable name</span>
+<span class="n">the_number_of_vowels_in_banana</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">#blank line</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">the_number_of_vowels_in_banana</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">10</span>
+<span class="err">3</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>2 to 5</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from 2 to 5 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer </span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># This is the same thing but with a more descriptive and longer variable name</span>
+<span class="n">the_number_of_vowels_in_banana</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>to 5</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from the beginning to 5 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py</span>
+<span class="c1"># a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer </span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># This is the same thing but with a more descriptive and longer variable name</span>
+<span class="n">the_number_of_vowels_in_banana</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>2 to 5, bash</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from 2 to 5 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer </span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># This is the same thing but with a more descriptive and longer variable name</span>
+<span class="n">the_number_of_vowels_in_banana</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li>
+<p>Version Control</p>
+<ul>
+<li>Git</li>
+<li>Creating a repository</li>
+<li>Staging, committing and pushing</li>
+</ul>
+</li>
+<li>
+<p>Variables and state</p>
+<ul>
+<li>Data Types</li>
+<li>Assignment</li>
+<li>Naming Conventions</li>
+<li>Test your Knowledge: Probabilities</li>
+</ul>
+</li>
+<li>
+<p>Statements and Expressions</p>
+<ul>
+<li>Evaluation</li>
+<li>Order of Precedence</li>
+<li>Literal Values</li>
+<li>Boolean Logic</li>
+<li>Inequalities</li>
+</ul>
+</li>
+<li>
+<p>Testing</p>
+<ul>
+<li>PyTest</li>
+<li>Unit Testing</li>
+<li>Regression Testing</li>
+<li>Integration Testing</li>
+<li>Test Your Knowledge: Bug Hunt (broken code they have to fix)</li>
+</ul>
+</li>
+<li>
+<p>Selection</p>
+<ul>
+<li>If</li>
+<li>Else</li>
+<li>Elif</li>
+</ul>
+</li>
+<li>
+<p>Iteration</p>
+<ul>
+<li><a href="for-loops/">For</a><ul>
+<li><a href="for-loops/#test-your-knowledge-countdown">Test Your Knowledge: Countdown</a></li>
+</ul>
+</li>
+<li>While<ul>
+<li>Test Your Knowledge: Fibonacci</li>
+</ul>
+</li>
+<li>Break</li>
+<li>Continue</li>
+<li>Else</li>
+<li>Test Your Knowledge: They Came From Space (or other game)</li>
+</ul>
+</li>
+<li>
+<p>Functions</p>
+<ul>
+<li>Function Syntax</li>
+<li>Returning Values</li>
+<li>Parameters</li>
+<li>Yield</li>
+<li>Lambda functions</li>
+<li>Passing functions</li>
+</ul>
+</li>
+<li>
+<p>Documentation</p>
+<ul>
+<li>Docstrings</li>
+<li>PyDoc (probably)</li>
+</ul>
+</li>
+<li>
+<p>Representation of Data</p>
+<ul>
+<li>Bytes, Characters and Byte Strings</li>
+<li>Bases</li>
+<li>Binary</li>
+<li>Hex</li>
+<li>ASCII, Unicode, UTF-8</li>
+<li>Base64</li>
+</ul>
+</li>
+<li>
+<p>Algorithms</p>
+<ul>
+<li>What is an algorithm?</li>
+<li>Efficiency<ul>
+<li>Test Your Knowledge: Recursive Fibonacci </li>
+</ul>
+</li>
+<li>Searching</li>
+<li>Sorting</li>
+</ul>
+</li>
+<li>
+<p>Classes and Objects</p>
+<ul>
+<li>Object-Oriented Programming</li>
+<li>Classes</li>
+<li>Objects</li>
+<li>Object properties and functions</li>
+<li>Class properties and functions</li>
+</ul>
+</li>
+<li>
+<p>Interacting with the Network</p>
+<ul>
+<li>Requests</li>
+<li>Sockets</li>
+<li>Scapy</li>
+<li>Beautiful Soup</li>
+</ul>
+</li>
+<li>
+<p>Modules and Packages</p>
+</li>
+<li>
+<p>Abstract Data Structures</p>
+<ul>
+<li>Trees</li>
+<li>Graphs</li>
+<li>Sets</li>
+</ul>
+</li>
+<li>
+<p>Low-Level Programming</p>
+<ul>
+<li>Assembly Language</li>
+<li>Interrupts</li>
+<li>Memory Organisation and Architecture</li>
+<li>The Stack </li>
+<li>The Heap<ul>
+<li>Now Try: Core Wars</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Functional programming
+???</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="values-and-types/" title="Values and Types" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Values and Types
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

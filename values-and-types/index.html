@@ -1,0 +1,852 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
+    
+    
+      
+        <title>Values and Types - Python Bad-Assery</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#values-and-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Python Bad-Assery" class="md-header-nav__button md-logo" aria-label="Python Bad-Assery">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Python Bad-Assery
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Values and Types
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python Bad-Assery" class="md-nav__button md-logo" aria-label="Python Bad-Assery">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    Python Bad-Assery
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Values and Types
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Values and Types" class="md-nav__link md-nav__link--active">
+      Values and Types
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-types-creating-your-first-variable" class="md-nav__link">
+    Basic Types: Creating your first variable
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Types: Creating your first variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    Naming Conventions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    Assignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-knowledge-making-your-own-variables" class="md-nav__link">
+    Test Your Knowledge: Making your own variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composite-types" class="md-nav__link">
+    Composite Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Composite Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-knowledge" class="md-nav__link">
+    Test Your Knowledge:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../conditionals/" title="Conditionals" class="md-nav__link">
+      Conditionals
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Iteration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Iteration" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Iteration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../for-loops/" title="For Loops" class="md-nav__link">
+      For Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../while-loops/" title="While Loops" class="md-nav__link">
+      While Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recursion/" title="Recursion" class="md-nav__link">
+      Recursion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../functions/" title="Functions" class="md-nav__link">
+      Functions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-types-creating-your-first-variable" class="md-nav__link">
+    Basic Types: Creating your first variable
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Types: Creating your first variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    Naming Conventions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    Assignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-knowledge-making-your-own-variables" class="md-nav__link">
+    Test Your Knowledge: Making your own variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composite-types" class="md-nav__link">
+    Composite Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Composite Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-knowledge" class="md-nav__link">
+    Test Your Knowledge:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="values-and-types">Values and Types</h1>
+<p>There are 4 basic types in python; Boolean, integer, floating point number and string. Booleans or "bools" are either true or false, a one or a zero, they are representative of the binary calculations that make computers work. Integers are any whole number and can be both positive and negative numbers, where as floating point numbers are anything with a decimal point in. A string is an interesting type as it also works like an iterable which we'll see more of later, but it stores a string of characters together. Every time we make a value that a computer needs to be able to reuse, we call that type a "variable". Let's look at some examples of how we use types and make variables:</p>
+<h2 id="basic-types-creating-your-first-variable">Basic Types: Creating your first variable</h2>
+<p>To create your first variable it's pretty easy, you just name it and then use the assignment operator to assign it to that name. This will create a sort of pet name, pseudonym, or alias for a location in memory where the object that contains the value is then stored. Anytime you use that pseudonym it'll refer to whatever is stored in that object again. It's easier to show you then it is to explain it, so make sure you feel comfortable with everything here before you move on. </p>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p>Variable names can start with a number, letter, or underscore, but not any other special character. <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> Python programming conventions say that variables should be named with all lower case letters, for longer variable names each word should be separated by underscores: </p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py</span>
+<span class="c1"># a simple variable followed by the equals sign, we can make it any type of variable but we will make it an integer </span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># This is the same thing but with a more descriptive and longer variable name</span>
+<span class="n">the_number_of_vowels_in_banana</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">#blank line</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">the_number_of_vowels_in_banana</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>As code is read many more times than its written, so generally speaking, longer variable names help others understand your code better. It's also good practice when you start to be very descriptive, so when you look back over your code to prompt you and study your programming, you'll remember what it was you were doing and how it works at a glance.</p>
+<h3 id="assignment">Assignment</h3>
+<p>Python is a dynamically typed language, what this means is that you don't have to know what type of data you want to label with a variable name to be able to create it. In statically typed languages such as the 'C' family of languages, you must declare the type of data you are going to store in memory before you store it. In python, variables dynamically change behind the scenes to accommodate different basic types, here's an example:</p>
+<div class='codeblock'><div class='codetitle'><code>example-2.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-2.py</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> 
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>In this example, our variable ambiguously called "variable" is a single location in memory. Each time we use the assignment operator (the equals sign), we force the variable to reference a different type of data and then ask it to print out to the screen. We're printing out the contents of the same alias every time, we're just overwriting the data in that location. We can also check the types of data with the next example:</p>
+<div class='codeblock'><div class='codetitle'><code>example-3.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-3.py</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">))</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">))</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">))</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">))</span> 
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">10</span>
+<span class="err">&lt;class &#39;int&#39;&gt;</span>
+<span class="err">True</span>
+<span class="err">&lt;class &#39;bool&#39;&gt;</span>
+<span class="err">hello</span>
+<span class="err">&lt;class &#39;str&#39;&gt;</span>
+<span class="err">3.14</span>
+<span class="err">&lt;class &#39;float&#39;&gt;</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>This does exactly the same as example 2 but it also prints out the basic type or object of the variable at each stage. Now you can see each of the types printed out too... see for yourself!</p>
+<h2 id="test-your-knowledge-making-your-own-variables">Test Your Knowledge: Making your own variables</h2>
+<p>For this knowledge test, using appropriate naming conventions try making your own variables to describe numbers and strings you might use in your own programs. Make variables to contain a happy birthday wish, the value of pi to 5 decimal places, your favourite integer under 100, a variable containing the meaning of life, and the true or false logic of whether a mouse is larger than a Giraffe. Try to make at least one variable of every basic type. </p>
+<h2 id="composite-types">Composite Types</h2>
+<h3 id="lists">Lists</h3>
+<p>There are also types that store or arrange basic types to make it easier to work with them, the three composite types are; lists, dictionaries, and tuples. Lists store a malleable group of variables that are easy to work with because the values can be referred to by index. An index is the numerical location of the position that a variable is in a list. Consider this list:</p>
+<div class='codeblock'><div class='codetitle'><code>example-4.py from 1 to 4 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-4.py</span>
+
+<span class="n">name_of_a_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">,</span> <span class="s2">&quot;are&quot;</span><span class="p">,</span> <span class="s2">&quot;contained&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;here&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">33.33334</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name_of_a_list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>As all indexes start at the number zero as a general rule in programming, we could also represent this data in a table like this:</p>
+<table>
+<thead>
+<tr>
+<th align="left">index number</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">variable data</td>
+<td align="center">"variables"</td>
+<td align="center">"are"</td>
+<td align="center">"contained"</td>
+<td align="center">"in"</td>
+<td align="center">"here"</td>
+<td align="center">12</td>
+<td align="center">True</td>
+<td align="center">33.33334</td>
+</tr>
+</tbody>
+</table>
+<p>We can write code to interact with an index value like this:   </p>
+<div class='codeblock'><div class='codetitle'><code>example-4.py from 1 to 5 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-4.py</span>
+
+<span class="n">name_of_a_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">,</span> <span class="s2">&quot;are&quot;</span><span class="p">,</span> <span class="s2">&quot;contained&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;here&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">33.33334</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name_of_a_list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>Which one of the variables do you think gets printed?? If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the data doesn't. Tuples are similar to lists in that they have an index number for the location of the data, but they are not mutable, which is to say they cannot change their data once they are created.</p>
+<h3 id="tuples">Tuples</h3>
+<p>Tuples can be treated in two ways, as a record and as an immutable list. As a record, tuples are used to store data in a certain order and keep it that way, generally for use later in the code:</p>
+<div class='codeblock'><div class='codetitle'><code>example-5.py from 1 to 10 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-5.py first example</span>
+<span class="c1"># showing that tuples are immutable by breaking things</span>
+
+<span class="c1"># odds of being struck by lightning</span>
+<span class="n">tuple_as_a_record</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;lightning strike&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">700000</span><span class="p">))</span>   
+<span class="n">accident</span><span class="p">,</span> <span class="p">(</span><span class="n">number_of_people</span><span class="p">,</span> <span class="n">in_population</span><span class="p">)</span> <span class="o">=</span> <span class="n">tuple_as_a_record</span>   <span class="c1"># tuple unpacking</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;&quot;&quot;The chance of being the victim of a </span><span class="si">{</span><span class="n">accident</span><span class="si">}</span><span class="s2">, is </span><span class="si">{</span><span class="n">number_of_people</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">in_population</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>In this example, the data is stored in a tuple and then unpacked for use in the print statement. You could print a packed tuple but you would get a print out with brackets too. Unpacking a tuple creates new objects that are referenced by the variables used in the unpacking, if you change the value of those variables then you'll only change the value of the new objects and not the values in the tuple you just unpacked. This is a good way to have records hard coded into a program Here is a short example of how that works:</p>
+<div class='codeblock'><div class='codetitle'><code>example-5.py from 12 to the end </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-5.py second example</span>
+<span class="c1"># showing that tuples are immutable by breaking things</span>
+
+<span class="n">tuple_as_a_record</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;meteor shower&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20000</span><span class="p">))</span>   
+<span class="n">accident</span><span class="p">,</span> <span class="p">(</span><span class="n">number_of_people</span><span class="p">,</span> <span class="n">in_population</span><span class="p">)</span> <span class="o">=</span> <span class="n">tuple_as_a_record</span>   <span class="c1"># tuple unpacking</span>
+
+<span class="n">accident</span> <span class="o">=</span> <span class="s2">&quot;shark attack&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">accident</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tuple_as_a_record</span><span class="p">)</span> 
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>This brings us nicely onto the other way to use tuples, as immutable lists. The reason you use tuples as immutable lists is so that you can use slicing and other list functionality that also works with tuples, but without the fear of someone else in your production team modifying the list by accident. Another way to store data as records is to store it as a dictionary.</p>
+<h3 id="dictionary">Dictionary</h3>
+<p>Dictionaries are an interesting data structure, its used to store data in key value pairs so that you can easily access the data by label instead of by index value. This is especially helpful if you want to dynamically create a csv file or know you need to store categorised data throughout a program, but other people are in charge of much of the data input. Dictionaries always have this form:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">,</span>
+      <span class="o">.</span>
+      <span class="o">.</span>
+      <span class="o">.</span>
+    <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Multiple values can be stored under the same key, and even any other objects, and all of them can be referenced with the key. Consider this assignment:</p>
+<div class='codeblock'><div class='codetitle'><code>example-6.py from 1 to 21 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-6.py first example</span>
+<span class="c1"># how to create a dictionary and how to fill it</span>
+<span class="n">our_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Boston&quot;</span><span class="p">:</span><span class="s2">&quot;Bruins&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Buffalo&quot;</span><span class="p">:</span><span class="s2">&quot;Sabres&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Detroit&quot;</span><span class="p">:</span><span class="s2">&quot;Redwings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Florida&quot;</span><span class="p">:</span><span class="s2">&quot;Panthers&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Montreal&quot;</span><span class="p">:</span><span class="s2">&quot;Canadiens&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Ottawa&quot;</span><span class="p">:</span> <span class="s2">&quot;Senators&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tampa&quot;</span><span class="p">:</span><span class="s2">&quot;Lightning&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Toronto&quot;</span><span class="p">:</span><span class="s2">&quot;Maple Leafs&quot;</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">our_dict</span><span class="p">))</span>
+
+<span class="n">our_dict</span><span class="p">[</span><span class="s2">&quot;New Jersey&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Devils&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">our_dict</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">our_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>     <span class="c1">## prints out all the pairs of &lt;keys&gt;:&lt;values&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">our_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>      <span class="c1">## prints out all the &lt;keys&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">our_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>    <span class="c1">## prints out all the &lt;values&gt; </span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">&lt;class &#39;dict&#39;&gt;</span>
+<span class="err">{&#39;Boston&#39;: &#39;Bruins&#39;, &#39;Buffalo&#39;: &#39;Sabres&#39;, &#39;Detroit&#39;: &#39;Redwings&#39;, &#39;Florida&#39;: &#39;Panthers&#39;, &#39;Montreal&#39;: &#39;Canadiens&#39;, &#39;Ottawa&#39;: &#39;Senators&#39;, &#39;Tampa&#39;: &#39;Lightning&#39;, &#39;Toronto&#39;: &#39;Maple Leafs&#39;, &#39;New Jersey&#39;: &#39;Devils&#39;}</span>
+<span class="err">dict_items([(&#39;Boston&#39;, &#39;Bruins&#39;), (&#39;Buffalo&#39;, &#39;Sabres&#39;), (&#39;Detroit&#39;, &#39;Redwings&#39;), (&#39;Florida&#39;, &#39;Panthers&#39;), (&#39;Montreal&#39;, &#39;Canadiens&#39;), (&#39;Ottawa&#39;, &#39;Senators&#39;), (&#39;Tampa&#39;, &#39;Lightning&#39;), (&#39;Toronto&#39;, &#39;Maple Leafs&#39;), (&#39;New Jersey&#39;, &#39;Devils&#39;)])</span>
+<span class="err">dict_keys([&#39;Boston&#39;, &#39;Buffalo&#39;, &#39;Detroit&#39;, &#39;Florida&#39;, &#39;Montreal&#39;, &#39;Ottawa&#39;, &#39;Tampa&#39;, &#39;Toronto&#39;, &#39;New Jersey&#39;])</span>
+<span class="err">dict_values([&#39;Bruins&#39;, &#39;Sabres&#39;, &#39;Redwings&#39;, &#39;Panthers&#39;, &#39;Canadiens&#39;, &#39;Senators&#39;, &#39;Lightning&#39;, &#39;Maple Leafs&#39;, &#39;Devils&#39;])</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>In this example we can see that it is reasonably simple to create a dictionary, you can either create an empty one or in our example have it pre-filled with a few things to get the ball rolling. Then as you progress in the program you can also add to it like any other dynamic object, this is done in our code with the line:</p>
+<div class='codeblock'><div class='codetitle'><code>example-6.py from 15 to 15 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">our_dict</span><span class="p">[</span><span class="s2">&quot;New Jersey&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Devils&quot;</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>The first part is the name of our dictionary, then the key we want to use inside the square brackets, and then the assignment operator followed by the value we want to give it.Using all of these basic and composite types are what make up everything you'll do to store, label, and create data inside a python program.  </p>
+<h2 id="test-your-knowledge">Test Your Knowledge:</h2>
+<p>Make for yourself a list, a tuple and a dictionary. Then look at different ways to add, remove, delete and generally manipulate the data that is associated with these composite types. The file "test-your-knowledge.py" has some broken code for you to fix and some notes on interesting ways to manipulate data in these composite types for you to complete.</p>
+<div class='codeblock'><div class='codetitle'><code>test-your-knowledge.py from 1 to 3 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># test-your-knowledge.py</span>
+<span class="c1"># Broken code to illustrate composite type manipulation in python 3.5</span>
+<span class="c1"># . . . </span>
+<span class="c1">## First create an empty dictionary called &quot;dictionary_of_things&quot;, </span>
+</code></pre></div>
+
+
+
+
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." title="home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../conditionals/" title="Conditionals" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Conditionals
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.codetitle, .codetitle code{
+    background: #ccc;
+    color: #333;
+}
+
+.codeblock{
+    padding:1em;
+    border: 1px solid #333;
+}
+
+.dlbtn{
+    float:right;
+}
+      
+
+.state-TODO{
+    background: #AA0000;
+    color: #000;
+
+}

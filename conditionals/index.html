@@ -1,0 +1,942 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
+    
+    
+      
+        <title>Conditionals - Python Bad-Assery</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conditional-statements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Python Bad-Assery" class="md-header-nav__button md-logo" aria-label="Python Bad-Assery">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Python Bad-Assery
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Conditionals
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python Bad-Assery" class="md-nav__button md-logo" aria-label="Python Bad-Assery">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    Python Bad-Assery
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../values-and-types/" title="Values and Types" class="md-nav__link">
+      Values and Types
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Conditionals
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Conditionals" class="md-nav__link md-nav__link--active">
+      Conditionals
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-of-precedence" class="md-nav__link">
+    Order of Precedence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literal-values" class="md-nav__link">
+    Literal Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-logic" class="md-nav__link">
+    Boolean Logic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-inequalities" class="md-nav__link">
+    TODO Inequalities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    If
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    Elif
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    Else
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Iteration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Iteration" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Iteration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../for-loops/" title="For Loops" class="md-nav__link">
+      For Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../while-loops/" title="While Loops" class="md-nav__link">
+      While Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recursion/" title="Recursion" class="md-nav__link">
+      Recursion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../functions/" title="Functions" class="md-nav__link">
+      Functions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-of-precedence" class="md-nav__link">
+    Order of Precedence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literal-values" class="md-nav__link">
+    Literal Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-logic" class="md-nav__link">
+    Boolean Logic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-inequalities" class="md-nav__link">
+    TODO Inequalities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    If
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    Elif
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    Else
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="conditional-statements">Conditional Statements</h1>
+<p>In python many variables that you create, whether they be basic ones or composite variables, need to be compared or evaluated at some point. If you have a variable in your code that isn't, then you probably don't need that variable. </p>
+<h2 id="evaluation">Evaluation</h2>
+<h2 id="order-of-precedence">Order of Precedence</h2>
+<p>Much like in math, python has an order to when an evaluation gets done. Here is a table:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Operators</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">()</td>
+<td align="left">Parentheses</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="left">Exponent</td>
+</tr>
+<tr>
+<td align="left">+x, -x, ~x</td>
+<td align="left">Unary plus, Unary minus, Bitwise NOT</td>
+</tr>
+<tr>
+<td align="left">*, /, //, %</td>
+<td align="left">Multiplication, Division, Floor division, Modulus</td>
+</tr>
+<tr>
+<td align="left">+, -</td>
+<td align="left">Addition, Subtraction</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;, &gt;&gt;</td>
+<td align="left">Bitwise shift operators</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">Bitwise AND</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">Bitwise XOR</td>
+</tr>
+<tr>
+<td align="left">|</td>
+<td align="left">Bitwise OR</td>
+</tr>
+<tr>
+<td align="left">==, !=, &gt;, &gt;=, &lt;, &lt;=,</td>
+<td align="left">is, is not, in, not in Comparisons, Identity, Membership operators</td>
+</tr>
+<tr>
+<td align="left">not</td>
+<td align="left">Logical NOT</td>
+</tr>
+<tr>
+<td align="left">and</td>
+<td align="left">Logical AND</td>
+</tr>
+<tr>
+<td align="left">or</td>
+<td align="left">Logical OR</td>
+</tr>
+</tbody>
+</table>
+<p>The higher something is on the table the sooner it gets done. Things in parenthesis get done first, mostly so you can force the order of precedence. There are a few gottcha's in this list that tend to get every programmer at least once, but for you guys the biggest one will be that logical AND is performed before logical OR. Consider this code fragment:</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from 1 to 10 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py first example</span>
+<span class="c1"># Precedence of or &amp; and</span>
+<span class="n">meal</span> <span class="o">=</span> <span class="s2">&quot;Spaghetti Carbonara&quot;</span>
+
+<span class="n">money</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="n">meal</span> <span class="o">==</span> <span class="s2">&quot;Spaghetti Carbonara&quot;</span> <span class="ow">or</span> <span class="n">meal</span> <span class="o">==</span> <span class="s2">&quot;Lasagne&quot;</span> <span class="ow">and</span> <span class="n">money</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dinner is served!!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t deliver dinner :( &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">Dinner is served!!</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>The code as you can see, doesn't respond the way we might like. We would want the code to work out if we can have dinner if we picked a valid dinner option and also had enough money, but as we don't have enough money why is it evaluating as True? It's because the AND evaluates first, evaluating to False, and then the OR evaluates. In the evaluation of True OR False, it always evaluates to True. We can fix this with tht following modification:</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from 13 to 22 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py second example</span>
+<span class="c1"># Fixed the order of precedents </span>
+<span class="n">meal</span> <span class="o">=</span> <span class="s2">&quot;Spaghetti Carbonara&quot;</span>
+
+<span class="n">money</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">meal</span> <span class="o">==</span> <span class="s2">&quot;Spaghetti Carbonara&quot;</span> <span class="ow">or</span> <span class="n">meal</span> <span class="o">==</span> <span class="s2">&quot;Lasagne&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">money</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dinner is served!!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t deliver dinner :( &quot;</span><span class="p">)</span> 
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">Can&#39;t deliver dinner :( </span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>The other order of precedence that you have to watch out for is that some evaluations start from the right, and others start from the left. Consider this code:</p>
+<div class='codeblock'><div class='codetitle'><code>example-2.py from 1 to 18 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-2.py</span>
+<span class="c1"># Showing order of precedence through examples</span>
+<span class="c1"># As all of these have the same precedence, </span>
+<span class="c1"># they get evaluated starting from left-right:</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">//</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">%</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">%</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">-</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Right to left precedence happens with **</span>
+<span class="c1"># Output: 512, since 2**(3**2) = 2**9</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># If 2 needs to be the first exponent evaluated, we need to use ()</span>
+<span class="c1"># Output: 64, since (2**3)**2 = 8**2 </span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> 
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">3</span>
+<span class="err">2</span>
+<span class="err">0</span>
+<span class="err">6</span>
+<span class="err">2</span>
+<span class="err">2</span>
+<span class="err">512</span>
+<span class="err">64</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<h2 id="literal-values">Literal Values</h2>
+<p>We've covered all of the basic types in python; the string, Boolean, integer, and floating point number. However, python also supports a lot of other literal values that aren't commonly used. Below is a more comprehensive list of literal values:</p>
+<table>
+<thead>
+<tr>
+<th align="left">literal type</th>
+<th align="left">sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">String literal</td>
+<td align="left">"hello",'hey'</td>
+</tr>
+<tr>
+<td align="left">int literal</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">Long int literal</td>
+<td align="left">879564L (Only in python 2.x)</td>
+</tr>
+<tr>
+<td align="left">Floating point</td>
+<td align="left">3.1459</td>
+</tr>
+<tr>
+<td align="left">Complex Literals</td>
+<td align="left">12j</td>
+</tr>
+<tr>
+<td align="left">Boolean Literals</td>
+<td align="left">True, False</td>
+</tr>
+<tr>
+<td align="left">Special Literals</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">Unicode Literals</td>
+<td align="left">u"Hello"</td>
+</tr>
+<tr>
+<td align="left">Byte Literals</td>
+<td align="left">b"Hello"</td>
+</tr>
+<tr>
+<td align="left">Hex Literals</td>
+<td align="left">0x +hexValue</td>
+</tr>
+<tr>
+<td align="left">Octal Literals</td>
+<td align="left">0o +octValue</td>
+</tr>
+<tr>
+<td align="left">List Literals</td>
+<td align="left">[] , [1, 2, 4, 5]</td>
+</tr>
+<tr>
+<td align="left">Tuple Literals</td>
+<td align="left">() , (9, ) , (1, 2, "happy")</td>
+</tr>
+<tr>
+<td align="left">Dictionary Literals</td>
+<td align="left">{} , {'x':7}</td>
+</tr>
+<tr>
+<td align="left">Set Literals</td>
+<td align="left">{8, 9, 10}</td>
+</tr>
+</tbody>
+</table>
+<p>For those interested in coding literals and some of the abstract ideas surrounding literal testing, you can find more reading on python 3 conventions <a href="https://www.python.org/dev/peps/pep-0586/">here</a> (WARNING: very advanced stuff!!).
+Generally though, you will only use basic types unless you are purposely trying to obfuscate your code, or doing type conversion specifically. It's just a good idea to be familiar with the other literals so that you aren't confused if you encounter them in other peoples code. The long integer isn't in python 3.x anymore as all integers are now treated as if they are long integers in python, to learn more about how it gets converted and how python is interpreted you can find it in the documentation <a href="https://docs.python.org/3/c-api/long.html">here</a>. </p>
+<h2 id="boolean-logic">Boolean Logic</h2>
+<p>All logic inside a computer boils down to True or False logic. True is either represented by its name or by the number 1, False is represented by its name or 0. All modern classical (Von Neumann architecture) computers are based off of Boolean logic and Boolean algebra, this means that all the components inside the machine have been developed to take 1's and 0's and represent them in every way we need to create. </p>
+<h2 id="todo-inequalities"><span class='state-TODO'>TODO</span> Inequalities</h2>
+<h2 id="if">If</h2>
+<p>The first control statement you need to learn in Python is the if statement. If statements are used in the construction of conditional execution to create decision making code. The 'if' part will execute if the statement evaluates as true. Consider this example:</p>
+<div class='codeblock'><div class='codetitle'><code>example-3.py from 1 to 30 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-3.py </span>
+<span class="c1"># if statements and control statements</span>
+<span class="c1"># Remember an if statement only triggers if it evaluates to True</span>
+
+<span class="n">variable_1</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">variable_2</span> <span class="o">=</span> <span class="mi">5</span> 
+<span class="n">variable_3</span> <span class="o">=</span> <span class="s2">&quot;trigonometry&quot;</span>
+<span class="n">variable_4</span> <span class="o">=</span> <span class="mf">5.5</span> 
+<span class="n">variable_5</span> <span class="o">=</span> <span class="kc">False</span> 
+
+<span class="k">if</span> <span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is greater than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">variable_1</span> <span class="o">&lt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is less than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">variable_1</span> <span class="o">==</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_1:</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> and variable_2:</span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2"> are equal&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_3</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_3 is an integer not a string, see: </span><span class="si">{</span><span class="n">variable_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_4</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_4 is a float type with a value of </span><span class="si">{</span><span class="n">variable_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">10 is greater than 5</span>
+<span class="err">variable_4 is a float type with a value of 5.5</span>
+<span class="err">variable_5 is False</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>Looking through this code you can see that some of the statements aren't printed. For instance, variable_3 is not of a type integer, you can also see that there are some statements that are there to catch different values of variable_1 and variable_2, and a statement to catch if variable_5 is True or False. This way of writing code isn't very readable however, because there are no logical connections between one statement and the others. This is where the elif statement comes in.</p>
+<h2 id="elif">Elif</h2>
+<p>We use the 'else if' or 'elif' statement to logically join statements together and run multiple checks on the same objects. If we take the code above and turn it into a more complex set of if statements then we get something a little clearer: </p>
+<div class='codeblock'><div class='codetitle'><code>example-4.py from 1 to 30 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-4.py </span>
+<span class="c1"># elif statements and evaluations</span>
+<span class="c1"># Remember an if or elif statement only triggers if it evaluates to True</span>
+
+<span class="n">variable_1</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">variable_2</span> <span class="o">=</span> <span class="mi">5</span> 
+<span class="n">variable_3</span> <span class="o">=</span> <span class="s2">&quot;trigonometry&quot;</span>
+<span class="n">variable_4</span> <span class="o">=</span> <span class="mf">5.5</span> 
+<span class="n">variable_5</span> <span class="o">=</span> <span class="kc">False</span> 
+
+<span class="k">if</span> <span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is greater than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
+
+<span class="k">elif</span> <span class="n">variable_1</span> <span class="o">&lt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is less than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">variable_1</span> <span class="o">==</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_1:</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> and variable_2:</span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2"> are equal&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_3</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_3 is an integer not a string, see: </span><span class="si">{</span><span class="n">variable_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_4</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_4 is a float type with a value of </span><span class="si">{</span><span class="n">variable_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">10 is greater than 5</span>
+<span class="err">variable_4 is a float type with a value of 5.5</span>
+<span class="err">variable_5 is False</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>As you can see the code is a little more logically grouped and it helps with processing cycles too. Once an if statement is executed, if it evaluates to true in the first part of the statement then it doesn't have to run any of the elif statements. As soon as one of the steps evaluates to true then the evaluation can exit there. In our previous example, each if statement has to be evaluated independently, increasing the amount of processing that needs to be done and making your code less readable. But what happens if you evaluate something and you don't trigger any condition, well there is the 'else' statement that handles that.   </p>
+<h2 id="else">Else</h2>
+<p>The else statement is designed to run after everything in the if/elif statement evaluates to False. Consider it a piece of code that runs 'if all else fails'. Else statements can also be used in loops which you will see later. Let's take the code we had in example 3 and 4 and improve it further to incorporate else statements:</p>
+<div class='codeblock'><div class='codetitle'><code>example-5.py from 1 to 40 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-5.py </span>
+<span class="c1"># else statements</span>
+<span class="c1"># Remember an if or elif statement only triggers if it evaluates to True,</span>
+<span class="c1"># if all of them evaluate to false then the else statement runs.</span>
+
+<span class="n">variable_1</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">variable_2</span> <span class="o">=</span> <span class="mi">5</span> 
+<span class="n">variable_3</span> <span class="o">=</span> <span class="s2">&quot;trigonometry&quot;</span>
+<span class="n">variable_4</span> <span class="o">=</span> <span class="mf">5.5</span> 
+<span class="n">variable_5</span> <span class="o">=</span> <span class="kc">False</span> 
+
+<span class="k">if</span> <span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is greater than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+<span class="k">elif</span> <span class="n">variable_1</span> <span class="o">&lt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is less than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+<span class="k">elif</span> <span class="n">variable_1</span> <span class="o">==</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_1:</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> and variable_2:</span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2"> are equal&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Something went very wrong!! Variable 1 or 2 are broken.&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_3</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_3 is an integer not a string, see: </span><span class="si">{</span><span class="n">variable_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_3 is not an integer, see: </span><span class="si">{</span><span class="n">variable_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_4</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_4 is a float type with a value of </span><span class="si">{</span><span class="n">variable_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_4 is the wrong type.&quot;</span><span class="p">)</span>    
+
+
+<span class="k">if</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is not a Boolean for some reason.&quot;</span><span class="p">)</span>    
+
+<span class="c1">## This file has some dependencies in the README.md file, check line 50. If you change this file you might have to change it there too.  </span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">10 is greater than 5</span>
+<span class="err">variable_3 is not an integer, see: trigonometry</span>
+<span class="err">variable_4 is a float type with a value of 5.5</span>
+<span class="err">variable_5 is False</span>
+</code></pre></div>
+
+
+
+
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../values-and-types/" title="Values and Types" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Values and Types
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../for-loops/" title="For Loops" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                For Loops
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -64,7 +64,14 @@ For those interested in coding literals and some of the abstract ideas surroundi
 Generally though, you will only use basic types unless you are purposely trying to obfuscate your code, or doing type conversion specifically. It's just a good idea to be familiar with the other literals so that you aren't confused if you encounter them in other peoples code. The long integer isn't in python 3.x anymore as all integers are now treated as if they are long integers in python, to learn more about how it gets converted and how python is interpreted you can find it in the documentation [here](https://docs.python.org/3/c-api/long.html). 
 
 
-## {{ state("TODO") }} Inequalities
+## Inequalities
+To talk about inequalities, we must first need to talk about what an equality is. In python, equality is the symbol == and will directly check if one object is equal to another object. This is not the same as the 'is' keyword. Consider this code:
+
+{{ code_from_file("conditionals/example-8.py", start=1, stop=15, execute=True) }}
+
+Here you can see that the difference between the equality operator and the is statement quite apparent. The equality operator looks to see if the values inside the lists are the same, whereas the is operator looks to see if the labels point to the same object. Understanding this key difference will help you to write good evaluation statements that behave the way you intend them to. 
+
+
 
 ## If 
 The first control statement you need to learn in Python is the if statement. If statements are used in the construction of conditional execution to create decision making code. The 'if' part will execute if the statement evaluates as true. Consider this example:

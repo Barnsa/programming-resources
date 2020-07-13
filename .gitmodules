@@ -1,0 +1,3 @@
+[submodule "mk_doc_ultra"]
+	path = mk_doc_ultra
+	url = git@github.coventry.ac.uk:csx239/mk_doc_ultra.git

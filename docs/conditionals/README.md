@@ -2,6 +2,11 @@
 In python many variables that you create, whether they be basic ones or composite variables, need to be compared or evaluated at some point. If you have a variable in your code that isn't, then you probably don't need that variable. 
 
 ## Evaluation
+In a python program, each line of the program is evaluated from top to bottom and left to right, unless order of precedents is in effect, with few exceptions. Common evaluations are things such as addition and subtraction, consider this code:
+
+{{ code_from_file("conditionals/example-9.py", execute=True) }}
+
+The last few examples show how even though the order of precedence makes sure that multiplication and division happens before the addition and subtraction, but then immediately once they have been taken care of the evaluation happens from left to right again. As you can also see, the program executes from the top line to the bottom line of code. This creates a logical layout that we will utilise later. 
 
 ## Order of Precedence 
 Much like in math, python has an order to when an evaluation gets done. Here is a table:
@@ -69,9 +74,34 @@ To talk about inequalities, we must first need to talk about what an equality is
 
 {{ code_from_file("conditionals/example-8.py", start=1, stop=15, execute=True) }}
 
-Here you can see that the difference between the equality operator and the is statement quite apparent. The equality operator looks to see if the values inside the lists are the same, whereas the is operator looks to see if the labels point to the same object. Understanding this key difference will help you to write good evaluation statements that behave the way you intend them to. 
+Here you can see that the difference between the equality operator and the is statement quite apparent. The equality operator looks to see if the values inside the lists are the same, whereas the is operator looks to see if the labels point to the same object. Understanding this key difference will help you to write good evaluation statements that behave the way you intend them to. Inequalities cover the other types of comparisons you might want to accomplish, consider this table:
 
+| Symbol |         Meaning          |
+| :----: | :----------------------: |
+|   ==   |         equal to         |
+|   !=   |       not equal to       |
+|   >    |       greater than       |
+|   >=   | greater than or equal to |
+|   <    |        less than         |
+|   <=   |  less than or equal to   |
 
+A comparison always evaluates from left to right in the sense that if you were to create a comparison such as: 
+
+```python
+print(variable_1 > variable_2) 
+```
+it would compare if variable_1 is greater than variable_2. This can be complicated by multiple evaluations however, consider this example:
+
+```python
+print(variable_1 > variable_2 > variable_3)
+```
+Python handles this type of evaluation by taking the first two and then the last two variables and evaluating them separately. This makes it equivalent to;
+
+```python
+print(variable_1 > variable_2 and variable_2 > variable_3)
+``` 
+
+Make sure you consider this behaviour when you write your own conditional statements. 
 
 ## If 
 The first control statement you need to learn in Python is the if statement. If statements are used in the construction of conditional execution to create decision making code. The 'if' part will execute if the statement evaluates as true. Consider this example:
@@ -118,3 +148,4 @@ All logic inside a computer boils down to True or False logic. True is either re
 When considering your if statements, you need to consider how they will be evaluated. Consider this code fragment:
 
 {{ code_from_file("conditionals/example-5.py", 1, 40, execute=True) }}
+

@@ -1,24 +1,29 @@
 # Introduction
 
-1 to 6, download
 
-{{ code_from_file("values-and-types/example-1.py", 1, 6, download=True) }}
 
-Flavour is python, exec
+{{ todo("Insert introduction, explaining the expectation, about the 'test your knowledge' tasks, etc.") }}
 
-{{ code_from_file("values-and-types/example-1.py", flavor = "python", execute=True, download=True) }}
 
-2 to 5
+<!-- 1 to 6, download -->
 
-{{ code_from_file("values-and-types/example-1.py", 2, 5) }}
+<!-- {{ code_from_file("values-and-types/example-1.py", 1, 6, download=True) }} -->
 
-to 5
+<!-- Flavour is python, exec -->
 
-{{ code_from_file("values-and-types/example-1.py", stop = 5) }}
+<!-- {{ code_from_file("values-and-types/example-1.py", flavor = "python", execute=True, download=True) }} -->
 
-2 to 5, bash
+<!-- 2 to 5 -->
 
-{{ code_from_file("values-and-types/example-1.py", 2, 5, "bash") }}
+<!-- {{ code_from_file("values-and-types/example-1.py", 2, 5) }} -->
+
+<!-- to 5 -->
+
+<!-- {{ code_from_file("values-and-types/example-1.py", stop = 5) }} -->
+
+<!-- 2 to 5, bash -->
+
+<!-- {{ code_from_file("values-and-types/example-1.py", 2, 5, "bash") }} -->
 
 
 # Contents

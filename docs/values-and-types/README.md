@@ -1,4 +1,8 @@
 # Values and Types
+
+{{ todo("Explain what types are first, then move on to how many and such.") }}
+
+
 There are 4 basic types in python; Boolean, integer, floating point number and string. Booleans or "bools" are either true or false, a one or a zero, they are representative of the binary calculations that make computers work. Integers are any whole number and can be both positive and negative numbers, where as floating point numbers are anything with a decimal point in. A string is an interesting type as it also works like an iterable which we'll see more of later, but it stores a string of characters together. Every time we make a value that a computer needs to be able to reuse, we call that type a "variable". Let's look at some examples of how we use types and make variables:
  
 ## Basic Types: Creating your first variable

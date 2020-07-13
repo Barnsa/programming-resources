@@ -5,6 +5,7 @@ nav:
   - 'Values and Types': 'values-and-types/README.md'
   - 'Conditionals': 'conditionals/README.md'
   - 'Iteration':
+    - 'Introduction to iteration': 'iteration.md'
     - 'For Loops': 'for-loops/README.md'
     - 'While Loops': 'while-loops/README.md'
     - 'Recursion': 'recursion/README.md'
@@ -17,6 +18,7 @@ plugins:
   - search
   - macros
 
+
 theme: 
   name: material
   logo: 'images/logo.svg'
@@ -25,15 +27,13 @@ theme:
     accent: 'indigo'
 
 
-module_name: main
-
 extra:
-    price: 12.50
-    company:
-        name: Acme
-        website: www.acme.com
+  draft: 1
+  year: '2020/21'
+
 
 
 extra_css:
     - css/extra.css
+    - css/mk_ultra.css
 

@@ -6,3 +6,7 @@ venv/
 
 # ignore __pycache__ everywhere
 *__pycache__/
+
+# ignore auto created caches
+*.pytest_cache
+*.vscode

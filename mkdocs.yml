@@ -5,35 +5,49 @@ nav:
   - 'Values and Types': 'values-and-types/README.md'
   - 'Conditionals': 'conditionals/README.md'
   - 'Iteration':
-    - 'Introduction to iteration': 'iteration.md'
-    - 'For Loops': 'for-loops/README.md'
-    - 'While Loops': 'while-loops/README.md'
-    - 'Recursion': 'recursion/README.md'
-  - 'Functions': 'functions/README.md'
+    - 'Introduction to iteration': 'iteration/intro-to-iteration.md'
+    - 'For Loops': 'iteration/for-loops/README.md'
+    - 'While Loops': 'iteration/while-loops/README.md'
+    - 'Recursion': 'iteration/recursion/README.md'
+  - 'Functions': 
+    - 'Introduction to functions': 'functions/intro-to-functions.md'
+    - 'Built-in functions': 'functions/built-in-functions/README.md'
+    - 'User created functions': 'functions/user-functions/README.md'
+
 
 markdown_extensions:
-  - codehilite
+  - admonition          ## see: https://squidfunk.github.io/mkdocs-material/extensions/admonition/ for usage 
+  - codehilite:
+      linenums: false    ## For line numbers in code blocks, true/false toggle
+  # - footnotes
+  # - meta
+
 
 plugins:
   - search
-  - macros
+  - macros:
+      # module_name: './mk_doc_ultra/main.py'     ## it's not this
+      # module_name: 'C:\Users\adzyb\Documents\Git\programming-resources\mk_doc_ultra\main.py'    ## it's not this either
+      # module_name: '../mk_doc_ultra/main.py'    ## or this... or some variation 
+      module_name: 'mk_doc_ultra.main'    ## Gottcha!! 
+      include_dir: 'mk_doc_ultra/'    ## not sure what this does, but it's good syntax 
 
 
 theme: 
   name: material
+  custom_dir: 'mk_doc_ultra/'
   logo: 'images/logo.svg'
   palette:
     primary: 'indigo'
     accent: 'indigo'
-
+  # include_dir: 'mk_doc_ultra/'    ## don't know what it does but there is good syntax here and no errors
+    
 
 extra:
   draft: 1
   year: '2020/21'
 
-
-
-extra_css:
+extra_css: #['../../mk_doc_ultra/mk_ultra.css']
     - css/extra.css
-    - css/mk_ultra.css
-
+    # - ../../mk_doc_ultra/mk_ultra.css
+    - mk_ultra.css

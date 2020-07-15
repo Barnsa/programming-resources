@@ -1,7 +1,5 @@
 # Introduction
 
-
-
 {{ todo("Insert introduction, explaining the expectation, about the 'test your knowledge' tasks, etc.") }}
 
 

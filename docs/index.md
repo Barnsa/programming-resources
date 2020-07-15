@@ -55,16 +55,15 @@
   	* [Else](./conditionals/README.md#Else)
 	* [Elif](./conditionals/README.md#elif)
 * Iteration
-	* [For](./for-loops/README.md)
-		* [Test Your Knowledge: Countdown](./for-loops/README.md#test-your-knowledge-countdown)
-	* [While](./while-loops/README.md)
-		* [Test Your Knowledge: Fibonacci](./while-loops/README.md#test-your-knowledge)
-	* Break
-	* Continue
-	* Else
+	* [For](./iteration/for-loops/README.md)
+		* [Test Your Knowledge: Countdown](./iteration/for-loops/README.md#test-your-knowledge-countdown)
+	* [While](./iteration/while-loops/README.md)
+		* [Test Your Knowledge: Fibonacci](./iteration/while-loops/README.md#test-your-knowledge)
+	* [Break](./iteration/control-statements/README.md#break)
+	* [Continue](./iteration/control-statements/README.md#continue)
 	* Test Your Knowledge: They Came From Space (or other game)
 
-* Functions
+* [Functions](./functions/intro-to-functions)
 	* Function Syntax
 	* Returning Values
 	* Parameters

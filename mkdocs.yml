@@ -11,8 +11,8 @@ nav:
     - 'Recursion': 'iteration/recursion/README.md'
   - 'Functions': 
     - 'Introduction to functions': 'functions/intro-to-functions.md'
-    - 'Built-in functions': 'functions/built-in-functions/README.md'
     - 'User created functions': 'functions/user-functions/README.md'
+    - 'Built-in functions': 'functions/built-in-functions/README.md'
 
 
 markdown_extensions:

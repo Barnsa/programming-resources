@@ -35,7 +35,7 @@ plugins:
 
 theme: 
   name: material
-  custom_dir: 'mk_doc_ultra/'
+  custom_dir: 'mk_doc_ultra/'   ## Labels a custom directory that can contain modifications to the theme, js and css are auto loaded from here.
   logo: 'images/logo.svg'
   palette:
     primary: 'indigo'

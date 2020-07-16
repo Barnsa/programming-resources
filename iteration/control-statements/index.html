@@ -15,7 +15,7 @@
     
     
       
-        <title>For Loops - Python Bad-Assery</title>
+        <title>Control Statements - Python Bad-Assery</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#for-loops" class="md-skip">
+        <a href="#control-statements" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              For Loops
+              Control Statements
             
           </span>
         </div>
@@ -222,7 +222,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../intro-to-iteration.md" title="Introduction to iteration" class="md-nav__link">
+    <a href="../intro-to-iteration/" title="Introduction to iteration" class="md-nav__link">
       Introduction to iteration
     </a>
   </li>
@@ -234,7 +234,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iteration/for-loops/README.md" title="For Loops" class="md-nav__link">
+    <a href="../for-loops/" title="For Loops" class="md-nav__link">
       For Loops
     </a>
   </li>
@@ -246,7 +246,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iteration/while-loops/README.md" title="While Loops" class="md-nav__link">
+    <a href="../while-loops/" title="While Loops" class="md-nav__link">
       While Loops
     </a>
   </li>
@@ -258,7 +258,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iteration/recursion/README.md" title="Recursion" class="md-nav__link">
+    <a href="../recursion/" title="Recursion" class="md-nav__link">
       Recursion
     </a>
   </li>
@@ -352,44 +352,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iterating-iterables" class="md-nav__link">
-    Iterating iterables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iterating-ranges" class="md-nav__link">
-    Iterating Ranges
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nested-loops" class="md-nav__link">
-    Nested Loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-your-knowledge-countdown" class="md-nav__link">
-    Test Your Knowledge: Countdown
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -404,42 +366,8 @@
                   
                 
                 
-                <h1 id="for-loops">For Loops</h1>
-<div class='todo'>Write intro specifically to for-loops</div>
-
-<h2 id="iterating-iterables">Iterating iterables</h2>
-<p>For loops always start with the keyword 'for' and then an iterator followed by some condition. 
-Here are a few examples:  </p>
-<p><b>File not found: for-loops/example-1.py</b></p>
-<p>In this first case, we define a sting of text we poignantly called string. Then we create the 'for' loop by stating that for each index (i) inside the string, we want to print out the value of 'i'. It is common practice in coding to use 'i' as the variable that iterates through something in a loop or for an index location for something iterable. The output of this code is that each letter is looked at by the 'i' in the for loop and then printed out to a new line in the console. </p>
-<p><b>File not found: for-loops/example-2.py</b></p>
-<p>In this example, we have a more pythonic idea. The word 'letter' works the same way as the 'i' in the previous example, it's just more descriptive which helps with clarity when rereading later. See if you can work out what this program does without running it. <br />
-Other than strings you can also iterate through any type of iterable including: dictionaries, lists, tuples and sets. 
-Here are some examples:</p>
-<p><b>File not found: for-loops/example-3.py</b></p>
-<p><b>File not found: for-loops/example-3.py</b></p>
-<p><b>File not found: for-loops/example-3.py</b></p>
-<h2 id="iterating-ranges">Iterating Ranges</h2>
-<p>Using the range function, we can also create 'for' loops that iterate a number of times. Consider these examples:</p>
-<p><b>File not found: for-loops/example-4.py</b>
-<b>File not found: for-loops/example-4.py</b>
-<b>File not found: for-loops/example-4.py</b></p>
-<p>In these examples, you can see how the range function is used to set a maximum limit to the number of times the 'for' loop iterates. Notice also that if you run the first example, count never makes it to 10, the numbers 0 all the way up to 9 are printed instead.   </p>
-<p><b>File not found: for-loops/example-4.py</b>
-<b>File not found: for-loops/example-4.py</b></p>
-<p>In these two examples, it's slightly more complicated to work out the integer after the calculation, but we know it will be a finite number. See if you can work out what these programs will print out without running them.   </p>
-<h2 id="nested-loops">Nested Loops</h2>
-<p>All loops can also be nested inside each other consider this example:</p>
-<p><b>File not found: for-loops/example-5.py</b></p>
-<p>In this example we iterate over two separate lists and join them together in the print statement. In the outside 'for' loop, x runs through each of the items in the variable 'adjective', then the inner 'for' loop is called and y iterates through the 'fruits' variable. When the outer loop gets to the first index, it runs the inner loop until it completes all it's iterations and then x moves onto the next index. In our example this means that 'x' first has the value 'red', then 'y' iterates through each of the 'fruits' list printing out 'red apple', 'red banana' and 'red cherry' first... Run the code for yourself and see. <br />
-To see how many times an inner loop will run, you can multiply it by all the possible different options of the outer loops and the inner loop to find out. Consider this example:   </p>
-<p><b>File not found: for-loops/example-5.py</b></p>
-<p>If you run this code, you can see that the code runs 36 times and that that's exactly the same number of times as each of list lengths multiplied together. There are some other niche cases you may see in loops, one of which is the 'else' statement.   </p>
-<p><b>File not found: for-loops/example-6.py</b></p>
-<p>When the loop finishes, anything in the 'else' statement is executed. If the loop is broken out of or fails to execute, the 'else' statement doesn't execute. Try this for yourself:   </p>
-<p><b>File not found: for-loops/example-6.py</b></p>
-<h2 id="test-your-knowledge-countdown">Test Your Knowledge: Countdown</h2>
-<p>See if you can create a loop that can count down from 10, and that once it gets to zero it prints the the word 'Liftoff!'. See if you can also make it print that the rocket was successfully launched. </p>
+                <h1 id="control-statements">Control Statements</h1>
+<p>When using any type of loop you may want to </p>
                 
               
               

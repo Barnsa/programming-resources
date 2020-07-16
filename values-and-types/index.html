@@ -41,6 +41,8 @@
     
       <link rel="stylesheet" href="../css/extra.css">
     
+      <link rel="stylesheet" href="../mk_ultra.css">
+    
     
       
     
@@ -233,13 +235,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#test-your-knowledge-making-your-own-variables" class="md-nav__link">
-    Test Your Knowledge: Making your own variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#composite-types" class="md-nav__link">
     Composite Types
   </a>
@@ -330,7 +325,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../for-loops/" title="For Loops" class="md-nav__link">
+    <a href="../iteration/intro-to-iteration.md" title="Introduction to iteration" class="md-nav__link">
+      Introduction to iteration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iteration/for-loops/README.md" title="For Loops" class="md-nav__link">
       For Loops
     </a>
   </li>
@@ -342,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../while-loops/" title="While Loops" class="md-nav__link">
+    <a href="../iteration/while-loops/README.md" title="While Loops" class="md-nav__link">
       While Loops
     </a>
   </li>
@@ -354,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../recursion/" title="Recursion" class="md-nav__link">
+    <a href="../iteration/recursion/README.md" title="Recursion" class="md-nav__link">
       Recursion
     </a>
   </li>
@@ -370,10 +377,64 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../functions/" title="Functions" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
       Functions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Functions" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Functions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../functions/intro-to-functions/" title="Introduction to functions" class="md-nav__link">
+      Introduction to functions
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../functions/user-functions/" title="User created functions" class="md-nav__link">
+      User created functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../functions/built-in-functions/" title="Built-in functions" class="md-nav__link">
+      Built-in functions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -426,13 +487,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-your-knowledge-making-your-own-variables" class="md-nav__link">
-    Test Your Knowledge: Making your own variables
-  </a>
   
 </li>
       
@@ -494,9 +548,15 @@
                 
                 
                 <h1 id="values-and-types">Values and Types</h1>
+<div class='todo'>Explain what types are first, then move on to how many and such.</div>
+
 <p>There are 4 basic types in python; Boolean, integer, floating point number and string. Booleans or "bools" are either true or false, a one or a zero, they are representative of the binary calculations that make computers work. Integers are any whole number and can be both positive and negative numbers, where as floating point numbers are anything with a decimal point in. A string is an interesting type as it also works like an iterable which we'll see more of later, but it stores a string of characters together. Every time we make a value that a computer needs to be able to reuse, we call that type a "variable". Let's look at some examples of how we use types and make variables:</p>
 <h2 id="basic-types-creating-your-first-variable">Basic Types: Creating your first variable</h2>
-<p>To create your first variable it's pretty easy, you just name it and then use the assignment operator to assign it to that name. This will create a sort of pet name, pseudonym, or alias for a location in memory where the object that contains the value is then stored. Anytime you use that pseudonym it'll refer to whatever is stored in that object again. It's easier to show you then it is to explain it, so make sure you feel comfortable with everything here before you move on. </p>
+<p>To create your first variable it's pretty easy, you just name it and then use the assignment operator to assign it to that name. This will create a sort of pet name, pseudonym, or alias for a location in memory where the object that contains the value is then stored. Anytime you use that pseudonym it'll refer to whatever is stored in that object again. It's easier to show you then it is to explain it. In the next few examples you'll see how to create and label a variable in python. The two things you need to keep in mind when creating a variable are; an appropriate name/label, and the type of variable you need to create.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Variables are the fundamentals of programming and are included everywhere, so make sure you feel comfortable with everything here before you move on to other sections.</p>
+</div>
 <h3 id="naming-conventions">Naming Conventions</h3>
 <p>Variable names can start with a number, letter, or underscore, but not any other special character. <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> Python programming conventions say that variables should be named with all lower case letters, for longer variable names each word should be separated by underscores: </p>
 <div class='codeblock'><div class='codetitle'><code>example-1.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
@@ -517,7 +577,11 @@
 
 </div>
 
-<p>As code is read many more times than its written, so generally speaking, longer variable names help others understand your code better. It's also good practice when you start to be very descriptive, so when you look back over your code to prompt you and study your programming, you'll remember what it was you were doing and how it works at a glance.</p>
+<div class="admonition check">
+<p class="admonition-title">Check</p>
+<p>As code is read many more times than its written, generally speaking, it is better to have longer variable names to help others understand your code better. It's also good practice when you start to be very descriptive, so when you look back over your code to prompt you and study your programming, you'll remember what it was you were doing and how it works at a glance.</p>
+</div>
+<p>Both of the names in the above example are kind of bad, one is too short and the other too long, try to strike a balance between the two for maximum understanding while preventing you from having to type out crazy long names for variables every time you want to use them. </p>
 <h3 id="assignment">Assignment</h3>
 <p>Python is a dynamically typed language, what this means is that you don't have to know what type of data you want to label with a variable name to be able to create it. In statically typed languages such as the 'C' family of languages, you must declare the type of data you are going to store in memory before you store it. In python, variables dynamically change behind the scenes to accommodate different basic types, here's an example:</p>
 <div class='codeblock'><div class='codetitle'><code>example-2.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
@@ -541,7 +605,7 @@
 
 </div>
 
-<p>In this example, our variable ambiguously called "variable" is a single location in memory. Each time we use the assignment operator (the equals sign), we force the variable to reference a different type of data and then ask it to print out to the screen. We're printing out the contents of the same alias every time, we're just overwriting the data in that location. We can also check the types of data with the next example:</p>
+<p>In this example, our variable ambiguously called "variable" is a single label pointing to a location in memory. Each time we use the assignment operator (the equals sign), we force the variable to reference a different location in memory that stores a different type of data, and then ask it to print out to the screen. We're printing out the contents of the same alias every time, we're just the memory location. We can also check the types of data with the next example:</p>
 <div class='codeblock'><div class='codetitle'><code>example-3.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># example-3.py</span>
@@ -582,18 +646,18 @@
 </div>
 
 <p>This does exactly the same as example 2 but it also prints out the basic type or object of the variable at each stage. Now you can see each of the types printed out too... see for yourself!</p>
-<h2 id="test-your-knowledge-making-your-own-variables">Test Your Knowledge: Making your own variables</h2>
+<div class="admonition note">
+<p class="admonition-title">Test Your Knowledge: Making your own variables</p>
 <p>For this knowledge test, using appropriate naming conventions try making your own variables to describe numbers and strings you might use in your own programs. Make variables to contain a happy birthday wish, the value of pi to 5 decimal places, your favourite integer under 100, a variable containing the meaning of life, and the true or false logic of whether a mouse is larger than a Giraffe. Try to make at least one variable of every basic type. </p>
+</div>
 <h2 id="composite-types">Composite Types</h2>
 <h3 id="lists">Lists</h3>
 <p>There are also types that store or arrange basic types to make it easier to work with them, the three composite types are; lists, dictionaries, and tuples. Lists store a malleable group of variables that are easy to work with because the values can be referred to by index. An index is the numerical location of the position that a variable is in a list. Consider this list:</p>
-<div class='codeblock'><div class='codetitle'><code>example-4.py from 1 to 4 </code> <span class='dlbtn'></span> </div>
+<div class='codeblock'><div class='codetitle'><code>example-4.py from 1 to 3 </code> <span class='dlbtn'></span> </div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># example-4.py</span>
 
 <span class="n">name_of_a_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;variables&quot;</span><span class="p">,</span> <span class="s2">&quot;are&quot;</span><span class="p">,</span> <span class="s2">&quot;contained&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;here&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">33.33334</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">name_of_a_list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div>
 
 
@@ -645,7 +709,11 @@
 
 </div>
 
-<p>Which one of the variables do you think gets printed?? If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the data doesn't. Tuples are similar to lists in that they have an index number for the location of the data, but they are not mutable, which is to say they cannot change their data once they are created.</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Which one of the variables in the above example do you think gets printed?? </p>
+</div>
+<p>If you guessed "contained" then you just got caught out by the one thing that catches out every programmer at least once. As we said, all indexes start at the number 0 as a general rule. So "variables" is at index 0, "are" at index 1, and so on. The astute among you may have noticed that the only difference between interacting with a list and making a list is the use of the assignment operator. That's true of all variables, assigning requires the assignment operator and using the label of the data doesn't. Tuples are similar to lists in that they have an index number for the location of the data, but they are not mutable, which is to say they cannot change their data once they are created.</p>
 <h3 id="tuples">Tuples</h3>
 <p>Tuples can be treated in two ways, as a record and as an immutable list. As a record, tuples are used to store data in a certain order and keep it that way, generally for use later in the code:</p>
 <div class='codeblock'><div class='codetitle'><code>example-5.py from 1 to 10 </code> <span class='dlbtn'></span> </div>
@@ -668,6 +736,8 @@
 </div>
 
 <p>In this example, the data is stored in a tuple and then unpacked for use in the print statement. You could print a packed tuple but you would get a print out with brackets too. Unpacking a tuple creates new objects that are referenced by the variables used in the unpacking, if you change the value of those variables then you'll only change the value of the new objects and not the values in the tuple you just unpacked. This is a good way to have records hard coded into a program Here is a short example of how that works:</p>
+<div class='todo'>Tuple unpacking doesn't work properly, look over this again and fix this example and explanation to be clearer</div>
+
 <div class='codeblock'><div class='codetitle'><code>example-5.py from 12 to the end </code> <span class='dlbtn'></span> </div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># example-5.py second example</span>
@@ -679,6 +749,14 @@
 <span class="n">accident</span> <span class="o">=</span> <span class="s2">&quot;shark attack&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">accident</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tuple_as_a_record</span><span class="p">)</span> 
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">shark attack</span>
+<span class="err">(&#39;meteor shower&#39;, (1, 20000))</span>
 </code></pre></div>
 
 
@@ -756,7 +834,7 @@
 <p>The first part is the name of our dictionary, then the key we want to use inside the square brackets, and then the assignment operator followed by the value we want to give it.Using all of these basic and composite types are what make up everything you'll do to store, label, and create data inside a python program.  </p>
 <h2 id="test-your-knowledge">Test Your Knowledge:</h2>
 <p>Make for yourself a list, a tuple and a dictionary. Then look at different ways to add, remove, delete and generally manipulate the data that is associated with these composite types. The file "test-your-knowledge.py" has some broken code for you to fix and some notes on interesting ways to manipulate data in these composite types for you to complete.</p>
-<div class='codeblock'><div class='codetitle'><code>test-your-knowledge.py from 1 to 3 </code> <span class='dlbtn'></span> </div>
+<!-- <div class='codeblock'><div class='codetitle'><code>test-your-knowledge.py from 1 to 3 </code> <span class='dlbtn'></span> </div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># test-your-knowledge.py</span>
 <span class="c1"># Broken code to illustrate composite type manipulation in python 3.5</span>
@@ -767,7 +845,7 @@
 
 
 
-</div>
+</div> -->
                 
               
               

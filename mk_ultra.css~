@@ -1,0 +1,61 @@
+
+.state-TODO{
+    background: #AA0000;
+    color: #000;
+
+}
+
+
+.todo{
+    color:  #931;
+    background: #fcdf03;
+    margin: 2em;
+    padding: 2em;
+
+}
+
+.todo:before{
+    margin: 1em;
+    margin-left: 0em;
+    margin-top: 0em;
+    background-image: url('https://img.icons8.com/material-two-tone/24/000000/task-completed.png');
+    background-repeat: no-repeat;
+
+    padding: 0em;
+    width: 1em;
+    height: 1em;
+    content: "";
+    float:left;
+
+    background-position: center; 
+}
+
+.state{
+    font-family: monospace;
+    font-size: small;
+    float: right;
+    margin-right: 1em;
+    -webkit-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.38);
+    box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.38);
+}
+
+
+.state-A{
+    background: #660000;
+    color: #FFF;
+
+}
+
+.state-B{
+    background: #bd9140;
+    color: #000;
+
+}
+
+
+.state-C{
+    background: #060;
+    color: #FFF;
+
+}

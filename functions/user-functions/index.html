@@ -10,18 +10,18 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
     
     
       
-        <title>Recursion - Python Bad-Assery</title>
+        <title>User created functions - Python Bad-Assery</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e35a1a6.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -39,7 +39,9 @@
     
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../mk_ultra.css">
     
     
       
@@ -59,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recursion" class="md-skip">
+        <a href="#functions" class="md-skip">
           Skip to content
         </a>
       
@@ -70,9 +72,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="Python Bad-Assery" class="md-header-nav__button md-logo" aria-label="Python Bad-Assery">
+    <a href="../.." title="Python Bad-Assery" class="md-header-nav__button md-logo" aria-label="Python Bad-Assery">
       
-  <img src="../images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -86,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Recursion
+              User created functions
             
           </span>
         </div>
@@ -143,9 +145,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Python Bad-Assery" class="md-nav__button md-logo" aria-label="Python Bad-Assery">
+    <a href="../.." title="Python Bad-Assery" class="md-nav__button md-logo" aria-label="Python Bad-Assery">
       
-  <img src="../images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     Python Bad-Assery
@@ -159,7 +161,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="home" class="md-nav__link">
+    <a href="../.." title="home" class="md-nav__link">
       home
     </a>
   </li>
@@ -171,7 +173,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../values-and-types/" title="Values and Types" class="md-nav__link">
+    <a href="../../values-and-types/" title="Values and Types" class="md-nav__link">
       Values and Types
     </a>
   </li>
@@ -183,7 +185,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../conditionals/" title="Conditionals" class="md-nav__link">
+    <a href="../../conditionals/" title="Conditionals" class="md-nav__link">
       Conditionals
     </a>
   </li>
@@ -193,12 +195,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Iteration
@@ -222,7 +222,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../for-loops/" title="For Loops" class="md-nav__link">
+    <a href="../../iteration/intro-to-iteration.md" title="Introduction to iteration" class="md-nav__link">
+      Introduction to iteration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iteration/for-loops/README.md" title="For Loops" class="md-nav__link">
       For Loops
     </a>
   </li>
@@ -234,8 +246,64 @@
 
 
   <li class="md-nav__item">
-    <a href="../while-loops/" title="While Loops" class="md-nav__link">
+    <a href="../../iteration/while-loops/README.md" title="While Loops" class="md-nav__link">
       While Loops
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iteration/recursion/README.md" title="Recursion" class="md-nav__link">
+      Recursion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Functions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Functions" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Functions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro-to-functions/" title="Introduction to functions" class="md-nav__link">
+      Introduction to functions
     </a>
   </li>
 
@@ -254,27 +322,27 @@
       
     
     
-    <a href="./" title="Recursion" class="md-nav__link md-nav__link--active">
-      Recursion
+    <a href="./" title="User created functions" class="md-nav__link md-nav__link--active">
+      User created functions
     </a>
     
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
+          
+          
+          
 
 
   <li class="md-nav__item">
-    <a href="../functions/" title="Functions" class="md-nav__link">
-      Functions
+    <a href="../built-in-functions/" title="Built-in functions" class="md-nav__link">
+      Built-in functions
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -309,7 +377,35 @@
                   
                 
                 
-                <h1 id="recursion">Recursion</h1>
+                <h1 id="functions">Functions</h1>
+<p>Functions are self contained objects that are used to create code that we often want to reuse. The most arbitrary use of a function is in this code:</p>
+<div class='codeblock'><div class='codetitle'><code>example-1.py from 1 to 10 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py first example</span>
+<span class="c1"># Precedence of or &amp; and</span>
+<span class="n">meal</span> <span class="o">=</span> <span class="s2">&quot;Spaghetti Carbonara&quot;</span>
+
+<span class="n">money</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="n">meal</span> <span class="o">==</span> <span class="s2">&quot;Spaghetti Carbonara&quot;</span> <span class="ow">or</span> <span class="n">meal</span> <span class="o">==</span> <span class="s2">&quot;Lasagne&quot;</span> <span class="ow">and</span> <span class="n">money</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dinner is served!!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t deliver dinner :( &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">Dinner is served!!</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>As you can see, we have created our first function. To create a function you must first use the def keyword followed by the name for the function. The naming conventions for functions are the same as they are for variables. However, it is good practice to have descriptive names for your functions so that you can recognise what they do at a glance. </p>
                 
               
               
@@ -328,7 +424,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../while-loops/" title="While Loops" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../intro-to-functions/" title="Introduction to functions" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -337,19 +433,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                While Loops
+                Introduction to functions
               </div>
             </div>
           </a>
         
         
-          <a href="../functions/" title="Functions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../built-in-functions/" title="Built-in functions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Functions
+                Built-in functions
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -376,15 +472,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "..",
+          base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.c03f0417.min.js"
+            worker: "../../assets/javascripts/worker/search.c03f0417.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

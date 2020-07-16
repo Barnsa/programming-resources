@@ -41,6 +41,8 @@
     
       <link rel="stylesheet" href="../css/extra.css">
     
+      <link rel="stylesheet" href="../mk_ultra.css">
+    
     
       
     
@@ -239,15 +241,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boolean-logic" class="md-nav__link">
-    Boolean Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#todo-inequalities" class="md-nav__link">
-    TODO Inequalities
+  <a href="#inequalities" class="md-nav__link">
+    Inequalities
   </a>
   
 </li>
@@ -269,6 +264,13 @@
         <li class="md-nav__item">
   <a href="#else" class="md-nav__link">
     Else
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-logic" class="md-nav__link">
+    Boolean Logic
   </a>
   
 </li>
@@ -311,7 +313,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../for-loops/" title="For Loops" class="md-nav__link">
+    <a href="../iteration/intro-to-iteration.md" title="Introduction to iteration" class="md-nav__link">
+      Introduction to iteration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iteration/for-loops/README.md" title="For Loops" class="md-nav__link">
       For Loops
     </a>
   </li>
@@ -323,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../while-loops/" title="While Loops" class="md-nav__link">
+    <a href="../iteration/while-loops/README.md" title="While Loops" class="md-nav__link">
       While Loops
     </a>
   </li>
@@ -335,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../recursion/" title="Recursion" class="md-nav__link">
+    <a href="../iteration/recursion/README.md" title="Recursion" class="md-nav__link">
       Recursion
     </a>
   </li>
@@ -351,10 +365,64 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../functions/" title="Functions" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
       Functions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Functions" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Functions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../functions/intro-to-functions/" title="Introduction to functions" class="md-nav__link">
+      Introduction to functions
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../functions/user-functions/" title="User created functions" class="md-nav__link">
+      User created functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../functions/built-in-functions/" title="Built-in functions" class="md-nav__link">
+      Built-in functions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -405,15 +473,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boolean-logic" class="md-nav__link">
-    Boolean Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#todo-inequalities" class="md-nav__link">
-    TODO Inequalities
+  <a href="#inequalities" class="md-nav__link">
+    Inequalities
   </a>
   
 </li>
@@ -439,6 +500,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boolean-logic" class="md-nav__link">
+    Boolean Logic
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -458,6 +526,73 @@
                 <h1 id="conditional-statements">Conditional Statements</h1>
 <p>In python many variables that you create, whether they be basic ones or composite variables, need to be compared or evaluated at some point. If you have a variable in your code that isn't, then you probably don't need that variable. </p>
 <h2 id="evaluation">Evaluation</h2>
+<p>In a python program, each line of the program is evaluated from top to bottom and left to right, unless order of precedents is in effect, with few exceptions. Common evaluations are things such as addition and subtraction, consider this code:</p>
+<div class='codeblock'><div class='codetitle'><code>example-9.py from the beginning to the end </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-9.py </span>
+<span class="c1"># Common evaluations and their outcomes</span>
+<span class="n">variable_1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">variable_2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">variable_3</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">variable_4</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># Simple math functionality</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">+</span> <span class="n">variable_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">-</span> <span class="n">variable_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">*</span> <span class="n">variable_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">/</span> <span class="n">variable_2</span><span class="p">)</span> <span class="c1"># / always becomes a floating number</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">%</span> <span class="n">variable_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">//</span> <span class="n">variable_2</span><span class="p">)</span>
+
+<span class="c1"># Let&#39;s do some type checking to prove it</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">+</span> <span class="n">variable_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">-</span> <span class="n">variable_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">*</span> <span class="n">variable_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">/</span> <span class="n">variable_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">%</span> <span class="n">variable_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">//</span> <span class="n">variable_2</span><span class="p">))</span>
+
+<span class="c1"># String concatination </span>
+<span class="c1"># this uses the + in an interesting way</span>
+<span class="n">string_1</span> <span class="o">=</span> <span class="s2">&quot;hey&quot;</span>
+<span class="n">string_2</span> <span class="o">=</span> <span class="s2">&quot;you&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string_1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">string_2</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">string_1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">string_2</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">))</span>
+
+<span class="c1"># interesting evaluations that still happen from left to right</span>
+<span class="c1"># mostly... </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">+</span> <span class="n">variable_2</span> <span class="o">*</span> <span class="n">variable_3</span> <span class="o">+</span> <span class="n">variable_4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable_4</span> <span class="o">+</span> <span class="n">variable_1</span> <span class="o">*</span> <span class="n">variable_2</span> <span class="o">-</span> <span class="n">variable_3</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">6</span>
+<span class="err">2</span>
+<span class="err">8</span>
+<span class="err">2.0</span>
+<span class="err">0</span>
+<span class="err">2</span>
+<span class="err">&lt;class &#39;int&#39;&gt;</span>
+<span class="err">&lt;class &#39;int&#39;&gt;</span>
+<span class="err">&lt;class &#39;int&#39;&gt;</span>
+<span class="err">&lt;class &#39;float&#39;&gt;</span>
+<span class="err">&lt;class &#39;int&#39;&gt;</span>
+<span class="err">&lt;class &#39;int&#39;&gt;</span>
+<span class="err">hey you!</span>
+<span class="err">&lt;class &#39;str&#39;&gt;</span>
+<span class="err">15</span>
+<span class="err">10</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>The last few examples show how even though the order of precedence makes sure that multiplication and division happens before the addition and subtraction, but then immediately once they have been taken care of the evaluation happens from left to right again. As you can also see, the program executes from the top line to the bottom line of code. This creates a logical layout that we will utilise later. </p>
 <h2 id="order-of-precedence">Order of Precedence</h2>
 <p>Much like in math, python has an order to when an evaluation gets done. Here is a table:</p>
 <table>
@@ -549,7 +684,7 @@
 
 </div>
 
-<p>The code as you can see, doesn't respond the way we might like. We would want the code to work out if we can have dinner if we picked a valid dinner option and also had enough money, but as we don't have enough money why is it evaluating as True? It's because the AND evaluates first, evaluating to False, and then the OR evaluates. In the evaluation of True OR False, it always evaluates to True. We can fix this with tht following modification:</p>
+<p>The code as you can see, doesn't respond the way we might like. We would want the code to work out if we can have dinner firstly if we picked a valid dinner option and also had enough money, but as we don't have enough money why is it evaluating as True? It's because the AND evaluates first, evaluating to False, and then the OR evaluates. In the evaluation of True OR False, it always evaluates to True. We can fix this with the following modification:</p>
 <div class='codeblock'><div class='codetitle'><code>example-1.py from 13 to 22 </code> <span class='dlbtn'></span> </div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># example-1.py second example</span>
@@ -618,6 +753,7 @@
 
 </div>
 
+<p>You can see that depending on the type of evaluation used it will depend on whether it is evaluated from left to right. When in doubt you should test your code thoroughly and use parenthesis. </p>
 <h2 id="literal-values">Literal Values</h2>
 <p>We've covered all of the basic types in python; the string, Boolean, integer, and floating point number. However, python also supports a lot of other literal values that aren't commonly used. Below is a more comprehensive list of literal values:</p>
 <table>
@@ -690,11 +826,133 @@
 </tr>
 </tbody>
 </table>
-<p>For those interested in coding literals and some of the abstract ideas surrounding literal testing, you can find more reading on python 3 conventions <a href="https://www.python.org/dev/peps/pep-0586/">here</a> (WARNING: very advanced stuff!!).
-Generally though, you will only use basic types unless you are purposely trying to obfuscate your code, or doing type conversion specifically. It's just a good idea to be familiar with the other literals so that you aren't confused if you encounter them in other peoples code. The long integer isn't in python 3.x anymore as all integers are now treated as if they are long integers in python, to learn more about how it gets converted and how python is interpreted you can find it in the documentation <a href="https://docs.python.org/3/c-api/long.html">here</a>. </p>
-<h2 id="boolean-logic">Boolean Logic</h2>
-<p>All logic inside a computer boils down to True or False logic. True is either represented by its name or by the number 1, False is represented by its name or 0. All modern classical (Von Neumann architecture) computers are based off of Boolean logic and Boolean algebra, this means that all the components inside the machine have been developed to take 1's and 0's and represent them in every way we need to create. </p>
-<h2 id="todo-inequalities"><span class='state-TODO'>TODO</span> Inequalities</h2>
+<p>For those interested in coding literals and some of the abstract ideas surrounding literal testing, you can find more reading on python 3 conventions <a href="https://www.python.org/dev/peps/pep-0586/">here</a> (WARNING: very advanced stuff!!). Here are some examples of the literals being used:</p>
+<div class='codeblock'><div class='codetitle'><code>example-6.py from 1 to the end </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-6.py</span>
+<span class="c1"># examples of exotic literals at work </span>
+<span class="n">string_literals</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
+<span class="n">integer_literals</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">octal_literals</span> <span class="o">=</span> <span class="mo">0o11</span>
+<span class="n">hexadecimal_literals</span> <span class="o">=</span> <span class="mh">0x123</span> 
+<span class="n">set_literals</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span>
+<span class="n">complex_literals</span> <span class="o">=</span> <span class="mi">12</span><span class="n">J</span>
+<span class="n">unicode_literals</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;string&quot;</span>
+<span class="n">byte_code_literals</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;string&quot;</span>    
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">string_literals</span><span class="p">,</span>
+    <span class="n">integer_literals</span><span class="p">,</span> 
+    <span class="n">octal_literals</span><span class="p">,</span> 
+    <span class="n">hexadecimal_literals</span><span class="p">,</span> 
+    <span class="n">set_literals</span><span class="p">,</span> 
+    <span class="n">complex_literals</span><span class="p">,</span> 
+    <span class="n">unicode_literals</span><span class="p">,</span> 
+    <span class="n">byte_code_literals</span>
+    <span class="p">)</span> 
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">string 12 9 291 {2, 4, 7} 12j string b&#39;string&#39;</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>Generally though, you will only use basic types unless you are purposely trying to obfuscate your code, or doing type conversion specifically. It's just a good idea to be familiar with the other literals so that you aren't confused if you encounter them in other peoples code. The long integer isn't in python 3.x anymore as all integers are now treated as if they are long integers in python, to learn more about how it gets converted and how python is interpreted you can find it in the documentation <a href="https://docs.python.org/3/c-api/long.html">here</a>. </p>
+<h2 id="inequalities">Inequalities</h2>
+<p>To talk about inequalities, we must first need to talk about what an equality is. In python, equality is the symbol == and will directly check if one object is equal to another object. This is not the same as the 'is' keyword. Consider this code:</p>
+<div class='codeblock'><div class='codetitle'><code>example-8.py from 1 to 15 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-8.py first example </span>
+<span class="c1"># Showing the difference between the is keyword and the equality operator</span>
+<span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span> 
+<span class="n">list_2</span> <span class="o">=</span> <span class="n">list_1</span>        
+<span class="n">list_3</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">list_1</span><span class="p">)</span>
+
+<span class="c1"># test all of the equalities</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_1</span> <span class="o">==</span> <span class="n">list_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_1</span> <span class="o">==</span> <span class="n">list_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_2</span> <span class="o">==</span> <span class="n">list_3</span><span class="p">)</span>
+
+<span class="c1"># test all of the is comparisons</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_1</span> <span class="ow">is</span> <span class="n">list_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_1</span> <span class="ow">is</span> <span class="n">list_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_2</span> <span class="ow">is</span> <span class="n">list_3</span><span class="p">)</span> 
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">True</span>
+<span class="err">True</span>
+<span class="err">True</span>
+<span class="err">True</span>
+<span class="err">False</span>
+<span class="err">False</span>
+</code></pre></div>
+
+
+
+
+</div>
+
+<p>Here you can see that the difference between the equality operator and the is statement quite apparent. The equality operator looks to see if the values inside the lists are the same, whereas the is operator looks to see if the labels point to the same object. Understanding this key difference will help you to write good evaluation statements that behave the way you intend them to. Inequalities cover the other types of comparisons you might want to accomplish, consider this table:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Symbol</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">==</td>
+<td align="center">equal to</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">not equal to</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">greater than</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">greater than or equal to</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">less than</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<p>A comparison always evaluates from left to right in the sense that if you were to create a comparison such as: </p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span><span class="p">)</span> 
+</code></pre></div>
+
+
+<p>it would compare if variable_1 is greater than variable_2. This can be complicated by multiple evaluations however, consider this example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span> <span class="o">&gt;</span> <span class="n">variable_3</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Python handles this type of evaluation by taking the first two and then the last two variables and evaluating them separately. This makes it equivalent to;</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span> <span class="ow">and</span> <span class="n">variable_2</span> <span class="o">&gt;</span> <span class="n">variable_3</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Make sure you consider this behaviour when you write your own conditional statements. </p>
 <h2 id="if">If</h2>
 <p>The first control statement you need to learn in Python is the if statement. If statements are used in the construction of conditional execution to create decision making code. The 'if' part will execute if the statement evaluates as true. Consider this example:</p>
 <div class='codeblock'><div class='codetitle'><code>example-3.py from 1 to 30 </code> <span class='dlbtn'></span> </div>
@@ -858,6 +1116,153 @@ Generally though, you will only use basic types unless you are purposely trying 
 
 
 </div>
+
+<h2 id="boolean-logic">Boolean Logic</h2>
+<p>All logic inside a computer boils down to True or False logic. True is either represented by its name or by the number 1, False is represented by its name or 0. All modern classical (Von Neumann architecture) computers are based off of Boolean logic and Boolean algebra, this means that all the components inside the machine have been developed to take 1's and 0's and represent them in every way we need to create useful data with. For the purposes of programming however, you need to understand how truth tables refer to AND, OR, NAND (not AND) and NOR (not OR) logic. Here are the truth tables for each of the logical comparisons</p>
+<table>
+<thead>
+<tr>
+<th align="center">AND</th>
+<th align="center">True</th>
+<th align="center">False</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">True</td>
+<td align="center">True</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">False</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">OR</th>
+<th align="center">True</th>
+<th align="center">False</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">True</td>
+<td align="center">True</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">False</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">NAND</th>
+<th align="center">True</th>
+<th align="center">False</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">True</td>
+<td align="center">False</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">True</td>
+<td align="center">True</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">NOR</th>
+<th align="center">True</th>
+<th align="center">False</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">True</td>
+<td align="center">False</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">False</td>
+<td align="center">True</td>
+</tr>
+</tbody>
+</table>
+<p>When considering your if statements, you need to consider how they will be evaluated. Consider this code fragment:</p>
+<div class='codeblock'><div class='codetitle'><code>example-5.py from 1 to 40 </code> <span class='dlbtn'></span> </div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># example-5.py </span>
+<span class="c1"># else statements</span>
+<span class="c1"># Remember an if or elif statement only triggers if it evaluates to True,</span>
+<span class="c1"># if all of them evaluate to false then the else statement runs.</span>
+
+<span class="n">variable_1</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">variable_2</span> <span class="o">=</span> <span class="mi">5</span> 
+<span class="n">variable_3</span> <span class="o">=</span> <span class="s2">&quot;trigonometry&quot;</span>
+<span class="n">variable_4</span> <span class="o">=</span> <span class="mf">5.5</span> 
+<span class="n">variable_5</span> <span class="o">=</span> <span class="kc">False</span> 
+
+<span class="k">if</span> <span class="n">variable_1</span> <span class="o">&gt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is greater than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+<span class="k">elif</span> <span class="n">variable_1</span> <span class="o">&lt;</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> is less than </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>        
+<span class="k">elif</span> <span class="n">variable_1</span> <span class="o">==</span> <span class="n">variable_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_1:</span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> and variable_2:</span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2"> are equal&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Something went very wrong!! Variable 1 or 2 are broken.&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_3</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_3 is an integer not a string, see: </span><span class="si">{</span><span class="n">variable_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_3 is not an integer, see: </span><span class="si">{</span><span class="n">variable_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable_4</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_4 is a float type with a value of </span><span class="si">{</span><span class="n">variable_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_4 is the wrong type.&quot;</span><span class="p">)</span>    
+
+
+<span class="k">if</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">variable_5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is </span><span class="si">{</span><span class="n">variable_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;variable_5 is not a Boolean for some reason.&quot;</span><span class="p">)</span>    
+
+<span class="c1">## This file has some dependencies in the README.md file, check line 50. If you change this file you might have to change it there too.  </span>
+</code></pre></div>
+
+
+
+<div class='codetitle'>Output</div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">10 is greater than 5</span>
+<span class="err">variable_3 is not an integer, see: trigonometry</span>
+<span class="err">variable_4 is a float type with a value of 5.5</span>
+<span class="err">variable_5 is False</span>
+</code></pre></div>
+
+
+
+
+</div>
                 
               
               
@@ -891,13 +1296,13 @@ Generally though, you will only use basic types unless you are purposely trying 
           </a>
         
         
-          <a href="../for-loops/" title="For Loops" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../functions/intro-to-functions/" title="Introduction to functions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                For Loops
+                Introduction to functions
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -5,7 +5,7 @@ nav:
   - 'Values and Types': 'values-and-types/README.md'
   - 'Conditionals': 'conditionals/README.md'
   - 'Iteration':
-    - 'Introduction to iteration': 'iteration/intro-to-iteration.md'
+    - 'Introduction to iteration': 'intro-to-iteration.md'
     - 'For Loops': 'iteration/for-loops/README.md'
     - 'While Loops': 'iteration/while-loops/README.md'
     - 'Recursion': 'iteration/recursion/README.md'

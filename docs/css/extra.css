@@ -12,3 +12,9 @@
     float:right;
 }
       
+
+/* used for changing the font in admonition extension paragraphs, 
+not needed if not using that mkdocs extension */
+.md-typeset .admonition, .md-typeset details{
+    font-size: inherit;     /* extension default is .64rem */
+}
